@@ -1,10 +1,14 @@
 import React from 'react'
 import { assets } from '../assets/assets'
+import Title from '../components/Title'
 
 const Home = () => {
   return (
     <div className='text-2xl font-bold'>
-      <h1 className='font-black'>asdadsads</h1>
+      <Title 
+      title="Services"
+      subtitle="asdasdadasahjdyjuashdikujasuhjdajkbghdad"
+      />
     </div>
   )
 }

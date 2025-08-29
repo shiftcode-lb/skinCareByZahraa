@@ -8,6 +8,23 @@
 
 /* font-family: "Corinthia", cursive; **/
 
+@theme{
+  --color-background: #e5d8b0;
+  --color-primary: #8e7b66;
+  --color-coprimary: #c4b494;
+  --color-borderColor: #c4b494;
+}
+.swiper-pagination-bullet {
+  background-color: #c4b494 !important; /* inactive bullet color */
+  opacity: 0.7 !important;           /* optional: less visible */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #8e7b66 !important; /* active bullet color (example orange) */
+  opacity: 1 !important;
+}
+
+
 html {
   scroll-behavior: smooth;
 }
