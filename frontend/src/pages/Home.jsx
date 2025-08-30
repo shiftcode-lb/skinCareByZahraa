@@ -1,6 +1,9 @@
 import React from 'react'
-import { assets } from '../assets/assets'
+// import { assets } from '../assets/assets'
 import Title from '../components/Title'
+import Footer from '../components/Footer'
+import FAQ from '../components/FAQ'
+import Workshop from '../components/Workshop'
 
 const Home = () => {
   return (
@@ -9,6 +12,9 @@ const Home = () => {
       title="Services"
       subtitle="asdasdadasahjdyjuashdikujasuhjdajkbghdad"
       />
+      <FAQ/>
+      <Workshop/>
+      <Footer/>
     </div>
   )
 }
