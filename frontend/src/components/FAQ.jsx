@@ -1,37 +1,68 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import tips from "../assets/images/tips.png";
+import Title from "./Title";
 
 const faqs = [
   {
-    question: "How secure is my financial data on your platform?",
+    question: "How long does a facial treatment typically last?",
     answer:
-      "Our childcare center is open from 7:00 AM to 6:00 PM, Monday through Friday. We offer flexible scheduling options to accommodate working families.",
+      "A facial session usually lasts between 45-90 minutes depending on your skin type, condition, and the type of treatment.",
   },
   {
-    question: "How does the subscription work?",
+    question: "How often should I get a facial?",
     answer:
-      "Our childcare center is open from 7:00 AM to 6:00 PM, Monday through Friday. We offer flexible scheduling options to accommodate working families.",
+      "Ideally every month, but it depends on your skin type, goals, and budget.",
   },
   {
-    question: "How much do your plans cost?",
-    answer:
-      "Our childcare center is open from 7:00 AM to 6:00 PM, Monday through Friday. We offer flexible scheduling options to accommodate working families.",
+    question: "What are the benefits of facials?",
+    answer: `• Deep cleansing of pores
+• Exfoliation of dead skin
+• Improved blood circulation
+• Hydration and skin nourishment
+• Stress relief and relaxation
+• Glowing, refreshed skin`,
   },
   {
-    question: "How quickly can You deliver designs for our business?",
-    answer:
-      "Our childcare center is open from 7:00 AM to 6:00 PM, Monday through Friday. We offer flexible scheduling options to accommodate working families.",
+    question: "What should I avoid after a facial?",
+    answer: `• Sun exposure
+• Makeup for 24 hours
+• Harsh skincare products (like retinoids or exfoliants)
+• Touching your face`,
   },
   {
-    question: "Can I request revisions to the designs provided?",
-    answer:
-      "Our childcare center is open from 7:00 AM to 6:00 PM, Monday through Friday. We offer flexible scheduling options to accommodate working families.",
+    question: "Are facials safe during pregnancy?",
+    answer: "Yes, pregnancy facials are customized with safe ingredients.",
   },
   {
-    question: "What types of designs does Designpro specialize in?",
+    question: "Are facials safe during your period?",
     answer:
-      "Our childcare center is open from 7:00 AM to 6:00 PM, Monday through Friday. We offer flexible scheduling options to accommodate working families.",
+      "Yes, but it's preferable to avoid the first days of the cycle to prevent pain and skin sensitivity.",
+  },
+  {
+    question: "Are facials safe while on Roaccutane?",
+    answer:
+      "Gentle hydrating facials are safe during Roaccutane. Avoid microneedling, chemical peels, and laser treatments during this period.",
+  },
+  {
+    question: "How many sessions do I need to see real results?",
+    answer:
+      "For skin concerns like pigmentation, acne, or aging, 4-6 treatment sessions are recommended to see significant improvement.",
+  },
+  {
+    question: "Time to wait between injections & skin treatments",
+    answer: `• Botox, filler, skin booster & skin treatment: 14 days
+• Laser & skin treatment: 14 days
+• Solarium/tanning: 7-10 days
+• Skin shaving or waxing: 7 days
+• Active ingredients (retinol, AHA, BHA): stop using 5-7 days before treatment`,
+  },
+  {
+    question: "Is microneedling suitable for all skin types?",
+    answer: `Microneedling may not be suitable for:
+• Very sensitive or reactive skin (rosacea flare-ups)
+• Skin with active acne, eczema, psoriasis, or infection
+• People on blood thinning medication or Roaccutane
+• Pregnancy and breastfeeding`,
   },
 ];
 
@@ -44,7 +75,7 @@ const FAQ = () => {
 
   return (
     <section id="faqs" className="px-6 md:px-20 py-10 lg:pt-20 pt-10">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-3 sm:px-4 md:px-11 lg:px-13 xl:px-12 2xl:px-16 max-w-screen-x">
         {/* Section Header */}
         <motion.div
           className="text-center pb-10"
@@ -55,50 +86,13 @@ const FAQ = () => {
         >
           <h3 className="border border-[#bebebe] py-2 px-4 rounded-2xl text-sm inline-block font-normal mb-2">
             <i className="ri-arrow-right-up-line text-primary"></i> FAQs
-          </h3>
-          <h2 className="xl:text-[60px] md:text-[40px] text-[32px] text-black-100 font-medium leading-tight">
-            Frequently Asked Questions
-          </h2>
-          <p className="md:text-lg text-sm mt-1 text-gray-600">
-            Helping you make the best skincare choices?
-          </p>
+          </h3> 
+          <Title title={'Frequently Asked Questions'} subtitle={'Helping you make the best skincare choices?'}/>
+
         </motion.div>
 
-        {/* Layout */}
-        <div className="grid lg:grid-cols-[33%_auto] md:grid-cols-2 grid-cols-1 gap-6">
-          {/* Left card */}
-          <motion.div
-            className="p-8 rounded-[15px] bg-black-200 text-center"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true }}
-          >
-            <img
-              src={tips}
-              alt="founder"
-              title="founder"
-              className="max-w-[120px] max-h-[120px] mx-auto"
-            />
-            <h2 className="text-secondary lg:text-[26px] text-2xl lg:leading-[1.2] py-2">
-              Contact me!
-            </h2>
-            <a
-              href="https://wa.me/96176873779"
-              className="btn bg-primary text-secondary border-primary hover:bg-black-200 hover:text-white text-sm py-2 px-4"
-            >
-              Direct Message! <i className="ri-video-chat-line"></i>
-            </a>
-            <p className="black text-sm mt-2">
-              Prefer to email?{" "}
-              <a href="mailto:atallahzahraa7@gmail.com" className="text-primary">
-                atallahzahraa7@gmail.com
-              </a>
-            </p>
-          </motion.div>
-
           {/* FAQ Accordion */}
-          <div className="flex flex-col gap-3 lg:pl-5">
+          <div className="flex  flex-col gap-3 lg:pl-5">
             {faqs.map((faq, index) => (
               <motion.div
                 key={index}
@@ -137,7 +131,6 @@ const FAQ = () => {
             ))}
           </div>
         </div>
-      </div>
     </section>
   );
 };
