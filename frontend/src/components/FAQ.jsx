@@ -114,7 +114,7 @@ const FAQ = () => {
                   className="accordion-header flex justify-between items-center text-base rounded-lg border border-[#ccc] py-3 px-4 font-medium cursor-pointer hover:bg-gray-50 transition"
                 >
                   {faq.question}
-                  <span className="inline-block w-[11px] h-[11px] rounded-full bg-secondary shrink-0 text-white flex items-center justify-center">
+                  <span className="w-[11px] h-[11px] rounded-full bg-secondary shrink-0 text-white flex items-center justify-center">
                     {openIndex === index ? "-" : "+"}
                   </span>
                 </h2>
