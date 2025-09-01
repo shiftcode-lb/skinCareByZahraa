@@ -27,6 +27,15 @@ const Feedbacks = () => {
     setCurrent((prev) => (prev === 0 ? slideData.length - 1 : prev - 1));
   };
 
+  // Handle drag end to decide direction
+  const handleDragEnd = (event, info) => {
+    if (info.offset.x < -100) {
+      nextSlide(); // swiped left → next
+    } else if (info.offset.x > 100) {
+      prevSlide(); // swiped right → previous
+    }
+  };
+
   return (
     <section className="flex flex-col items-center w-full py-20 bg-gray-50">
       {/* Title Section */}
@@ -63,25 +72,29 @@ const Feedbacks = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -100 }}
             transition={{ duration: 0.6 }}
+            drag="x"
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={0.3}
+            onDragEnd={handleDragEnd}
           />
         </AnimatePresence>
 
         {/* Controls */}
         <button
           onClick={prevSlide}
-          className="absolute cursor-pointer left-4 top-1/2 -translate-y-1/2 text-black rounded-full p-3"
+          className="absolute cursor-pointer left-4 top-1/2 -translate-y-1/2 text-black rounded-full p-3 bg-white shadow"
         >
           ◀
         </button>
         <button
           onClick={nextSlide}
-          className="absolute cursor-pointer right-4 top-1/2 -translate-y-1/2 text-black rounded-full p-3"
+          className="absolute cursor-pointer right-4 top-1/2 -translate-y-1/2 text-black rounded-full p-3 bg-white shadow"
         >
           ▶
         </button>
       </motion.div>
 
-      {/* Dots (moved outside image container) */}
+      {/* Dots */}
       <div className="mt-6 flex justify-center gap-2">
         {slideData.map((_, index) => (
           <div
