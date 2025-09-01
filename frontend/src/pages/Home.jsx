@@ -5,6 +5,7 @@ import Footer from '../components/Footer'
 import FAQ from '../components/FAQ'
 import Workshop from '../components/Workshop'
 import Feedbacks from '../components/Feedbacks'
+import Map from '../components/Map'
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <Feedbacks/>
       <FAQ/>
       <Workshop/>
+      <Map/>
       <Footer/>
     </div>
   )

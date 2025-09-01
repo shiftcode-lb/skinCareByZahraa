@@ -1,37 +1,19 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import feedback1 from '../assets/images/feedbacks/feedback1.jpeg'
-import feedback2 from '../assets/images/feedbacks/feedback2.jpeg'
-import feedback3 from '../assets/images/feedbacks/feedback3.jpeg'
-import feedback4 from '../assets/images/feedbacks/feedback4.jpeg'
-import feedback5 from '../assets/images/feedbacks/feedback5.jpeg'
-import feedback6 from '../assets/images/feedbacks/feedback6.jpeg'
-
+import feedback1 from "../assets/images/feedbacks/feedback1.jpeg";
+import feedback2 from "../assets/images/feedbacks/feedback2.jpeg";
+import feedback3 from "../assets/images/feedbacks/feedback3.jpeg";
+import feedback4 from "../assets/images/feedbacks/feedback4.jpeg";
+import feedback5 from "../assets/images/feedbacks/feedback5.jpeg";
+import feedback6 from "../assets/images/feedbacks/feedback6.jpeg";
 
 const slideData = [
-  {
-    title: "Mystic Mountains",
-    src: feedback1,
-  },
-  {
-    title: "Urban Dreams",
-    src: feedback2,
-  },
-  {
-    title: "Neon Nights",
-    src: feedback3,
-  },
-  {
-    title: "Desert Whispers",
-    src: feedback4,
-  },
-  {
-    title: "Desert Whispers",
-    src: feedback5,
-  },{
-    title: "Desert Whispers",
-    src: feedback6,
-  },
+  { title: "Mystic Mountains", src: feedback1 },
+  { title: "Urban Dreams", src: feedback2 },
+  { title: "Neon Nights", src: feedback3 },
+  { title: "Desert Whispers", src: feedback4 },
+  { title: "Desert Whispers", src: feedback5 },
+  { title: "Desert Whispers", src: feedback6 },
 ];
 
 const Feedbacks = () => {
@@ -87,30 +69,30 @@ const Feedbacks = () => {
         {/* Controls */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-black rounded-full p-3 shadow"
+          className="absolute cursor-pointer left-4 top-1/2 -translate-y-1/2 text-black rounded-full p-3"
         >
           ◀
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-black rounded-full p-3 shadow"
+          className="absolute cursor-pointer right-4 top-1/2 -translate-y-1/2 text-black rounded-full p-3"
         >
           ▶
         </button>
-
-        {/* Dots */}
-        <div className="absolute bottom-4 w-full flex justify-center gap-2">
-          {slideData.map((_, index) => (
-            <div
-              key={index}
-              onClick={() => setCurrent(index)}
-              className={`w-3 h-3 rounded-full cursor-pointer transition-all ${
-                current === index ? "bg-white scale-110" : "bg-gray-400"
-              }`}
-            ></div>
-          ))}
-        </div>
       </motion.div>
+
+      {/* Dots (moved outside image container) */}
+      <div className="mt-6 flex justify-center gap-2">
+        {slideData.map((_, index) => (
+          <div
+            key={index}
+            onClick={() => setCurrent(index)}
+            className={`w-3 h-3 rounded-full cursor-pointer transition-all ${
+              current === index ? "bg-gray-800 scale-110" : "bg-gray-400"
+            }`}
+          ></div>
+        ))}
+      </div>
     </section>
   );
 };
