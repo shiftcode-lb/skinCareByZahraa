@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap');
 @import "tailwindcss";
 
 
@@ -9,10 +10,17 @@
 
 
 .fancy{
-  font-family: "Tangerine", cursive;
+  font-family: "Bonheur Royale", cursive;
   font-weight: 400;
   font-style: normal;
   font-size: 30px;
+}
+
+.fancy-heavy{
+  font-family: "Bonheur Royale", cursive;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 50px;
 }
 
 @theme{
