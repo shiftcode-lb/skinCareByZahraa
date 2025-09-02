@@ -19,10 +19,18 @@ import hero from "./images/Skincare-pana.png"
 import skincare from "./images/skincare.png"
 import tips from "./images/tips.png"
 import toDo from "./images/toDo.png"
+import logo from "./images/logo1.png"
+import logo_sm from "./images/logo-sm.png"
+import close_icon from "./images/close_icon.svg";
+import menu_icon from "./images/menu_icon.svg";
+import owner from "./images/owner.png"
+import back1 from "./images/background/back1.png"
+import back2 from "./images/background/back2.png"
+import back3 from "./images/background/back3.png"
+import back4 from "./images/background/back4.png"
+import back5 from "./images/background/back5.png"
 
-
-
-export const assets = [
+export const assets = {
     feedback1,
     feedback2,
     feedback3,
@@ -43,8 +51,18 @@ export const assets = [
     hero,
     skincare,
     tips,
-    toDo
-]
+    toDo,
+    logo,
+    logo_sm,
+    menu_icon,
+    close_icon,
+    owner,
+    back1,
+    back2,
+    back3,
+    back4,
+    back5
+}
 
 
 export const menuLinks = [

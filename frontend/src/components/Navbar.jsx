@@ -43,21 +43,26 @@ useEffect(() => {
   }, [lastScrollY]);
 
   return (
-    <div className={`border-b border-borderColor py-7 fixed top-0 w-full bg-background z-50 transition-transform duration-300
+    <div className={`border-b border-borderColor py-[10.5px] fixed top-0 w-full bg-background z-50 transition-transform duration-300
       ${showNavbar ? 'translate-y-0' : '-translate-y-full'}`}>
     <div className={`flex items-center justify-between  text-[17px]
     w-full mx-auto px-3 sm:px-4 md:px-11 lg:px-13 xl:px-12 2xl:px-16 max-w-screen-xl
-  text-gray-600  relative transition-all`}> 
+  text-primary relative transition-all`}> 
+  <div className='flex flex-row items-center'>
         <img
   src={assets.logo}
   alt="Navbar Logo"
-  className="h-8 cursor-pointer"
+  className=" cursor-pointer w-[75px] h-[75px]" 
   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
 />
-        <div className={`max-sm:fixed max-sm:h-screen max-sm:w-full max-sm:top-16 
+      <p className='ml-3 text-center text-xl fancy'>
+        Skin Care By Zahraa
+      </p>
+</div>
+        <div className={`max-sm:fixed max-sm:h-screen max-sm:w-full max-sm:top-18 inset-0 relative
         max-sm:border-t border-borderColor right-0 flex flex-col sm:flex-row items-start
-        sm:items-center gap-4 sm:gap-8 max-sm:p-4 transition-all duration-300 z-50 mt-6 sm:mt-0
-        ${open ? "max-sm:translate-x-0 bg-background" : "max-sm:translate-x-full"}`}>
+        sm:items-center gap-4 sm:gap-8 max-sm:p-4 transition-all duration-300 mt-6 sm:mt-0
+        ${open ? "max-sm:translate-x-0 bg-background flex max-sm:items-center max-sm:justify-start text-center z-0" : "max-sm:translate-x-full"}`}>
             {menuLinks.map((link, index) => {
   if (link.name === "Home") {
     return (
@@ -65,7 +70,7 @@ useEffect(() => {
         key={index}
         href="#top"
         onClick={() => setOpen(false)}
-        className="your-styles cursor-pointer"
+        className="cursor-pointer font-semibold"
       >
         {link.name}
       </a>
@@ -76,7 +81,7 @@ useEffect(() => {
       key={index}
       href={link.path}
       onClick={() => setOpen(false)}
-      className="your-styles cursor-pointer"
+      className="cursor-pointer font-semibold"
     >
       {link.name}
     </a>
