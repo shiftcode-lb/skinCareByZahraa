@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Title from "./Title";
 
-const faqs = [
+const faqsData = [
   {
     question: "How long does a facial treatment typically last?",
     answer:
@@ -69,69 +69,65 @@ const faqs = [
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
-  const toggleAccordion = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
 
   return (
-    <section id="faqs" className="px-6 md:px-20 py-10 lg:pt-20 pt-10">
-      <div className="container mx-auto px-3 sm:px-4 md:px-11 lg:px-13 xl:px-12 2xl:px-16 max-w-screen-x">
-        {/* Section Header */}
-        <motion.div
-          className="text-center pb-10"
-          initial={{ opacity: 0, y: -40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true }}
+    <div className="flex flex-col justify-center items-center mb-15 relative
+  w-full mx-auto px-3 sm:px-4 md:px-11 lg:px-13 xl:px-12 2xl:px-16 max-w-screen-xl" id='dicover-more'>
+    
+  <Title
+    title="Frequently Asked Questions"
+    subtitle="Proactively answering FAQs boosts user confidence and cuts down on support tickets"
+  />
+
+  <div className="w-full flex flex-col items-center gap-6 mt-10">
+    {faqsData.map((faq, index) => (
+      <div
+        key={index}
+        className="w-full"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <div
+          className="flex items-center justify-between w-full border border-borderColor p-4 rounded cursor-pointer"
+          onClick={() => setOpenIndex(openIndex === index ? null : index)}
         >
-          <h3 className="border border-[#bebebe] py-2 px-4 rounded-2xl text-sm inline-block font-normal mb-2">
-            <i className="ri-arrow-right-up-line text-primary"></i> FAQs
-          </h3> 
-          <Title title={'Frequently Asked Questions'} subtitle={'Helping you make the best skincare choices?'}/>
+          <h2 className="text-sm w-full text-center text-primary">{faq.question}</h2>
 
-        </motion.div>
-
-          {/* FAQ Accordion */}
-          <div className="flex  flex-col gap-3 lg:pl-5">
-            {faqs.map((faq, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="accordion-item"
-              >
-                {/* Question */}
-                <h2
-                  onClick={() => toggleAccordion(index)}
-                  className="accordion-header flex justify-between items-center text-base rounded-lg border border-[#ccc] py-3 px-4 font-medium cursor-pointer hover:bg-gray-50 transition"
-                >
-                  {faq.question}
-                  <span className="w-[11px] h-[11px] rounded-full bg-secondary shrink-0 text-white flex items-center justify-center">
-                    {openIndex === index ? "-" : "+"}
-                  </span>
-                </h2>
-
-                {/* Answer with AnimatePresence */}
-                <AnimatePresence>
-                  {openIndex === index && (
-                    <motion.div
-                      className="accordion-body px-4"
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.4 }}
-                    >
-                      <p className="mb-2 text-sm py-2">{faq.answer}</p>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </motion.div>
-            ))}
+          <div className="ml-4 flex-shrink-0">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className={`transition-all duration-500 ease-in-out ${
+                openIndex === index ? "rotate-180" : ""
+              }`}
+            >
+              <path
+                d="m4.5 7.2 3.793 3.793a1 1 0 0 0 1.414 0L13.5 7.2"
+                stroke="#1D293D"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
           </div>
         </div>
-    </section>
+
+        <p
+          className={`text-sm text-slate-500 px-4 transition-all text-center duration-500 ease-in-out ${
+            openIndex === index
+              ? "opacity-100 max-h-[300px] translate-y-0 pt-4"
+              : "opacity-0 max-h-0 -translate-y-2"
+          }`}
+        >
+          {faq.answer}
+        </p>
+      </div>
+    ))}
+  </div>
+</div>
   );
 };
 

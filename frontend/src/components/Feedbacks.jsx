@@ -37,7 +37,7 @@ const Feedbacks = () => {
   };
 
   return (
-    <section className="flex flex-col items-center w-full py-20 bg-gray-50">
+    <section className="flex flex-col items-center py-10 px-3 sm:px-4 md:px-11 lg:px-13 xl:px-12 2xl:px-16">
       {/* Title Section */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -60,7 +60,7 @@ const Feedbacks = () => {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="relative w-full md:w-1/2 h-[500px] overflow-hidden rounded-2xl shadow-xl"
+        className="relative w-full md:w-1/2 h-[380px] overflow-hidden rounded-2xl shadow-xl border border-borderColor"
       >
         <AnimatePresence mode="wait">
           <motion.img
