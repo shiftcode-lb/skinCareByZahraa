@@ -6,6 +6,8 @@ import feedback3 from "../assets/images/feedbacks/feedback3.jpeg";
 import feedback4 from "../assets/images/feedbacks/feedback4.jpeg";
 import feedback5 from "../assets/images/feedbacks/feedback5.jpeg";
 import feedback6 from "../assets/images/feedbacks/feedback6.jpeg";
+import RoundTitle from "./RoundTitle";
+import Title from "./Title";
 
 const slideData = [
   { title: "Mystic Mountains", src: feedback1 },
@@ -37,22 +39,15 @@ const Feedbacks = () => {
   };
 
   return (
-    <section className="flex flex-col items-center py-10 px-3 sm:px-4 md:px-11 lg:px-13 xl:px-12 2xl:px-16">
+    <section className="flex flex-col items-center px-3 sm:px-4 md:px-11 lg:px-13 xl:px-12 2xl:px-16">
       {/* Title Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-        className="text-center mb-12"
-      >
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-3">
-          What Our Clients Say
-        </h2>
-        <p className="text-gray-600 text-lg max-w-xl mx-auto">
-          Real stories and feedbacks from people who trusted us.
-        </p>
-      </motion.div>
+      <RoundTitle 
+      title="Feedbacks"
+      />
+      <Title 
+      title="What Our Clients Say"
+      subtitle="See why clients love their skincare journey with us"
+      />
 
       {/* Carousel Section */}
       <motion.div
@@ -60,7 +55,7 @@ const Feedbacks = () => {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="relative w-full md:w-1/2 h-[380px] overflow-hidden rounded-2xl shadow-xl border border-borderColor"
+        className="relative w-full md:w-1/2 h-[380px] overflow-hidden rounded-2xl shadow-xl border border-borderColor mt-10 "
       >
         <AnimatePresence mode="wait">
           <motion.img

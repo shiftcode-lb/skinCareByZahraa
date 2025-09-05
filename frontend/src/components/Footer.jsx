@@ -1,11 +1,11 @@
 import React from "react";
-
+import { assets } from '../assets/assets'
 const Footer = () => {
   return (
-    <div class="relative flex flex-col items-center justify-center w-full py-15 bg-gradient-to-b from-[#86735d] to-[#bb9447] text-white/70">
-    <a href="#" class="flex items-center justify-center text-2xl font-semibold text-background">
-        <img src="https://www.svgrepo.com/show/499962/music.svg" class="h-12 mr-3 sm:h-9" alt="Landwind Logo"/>
-		Landwind
+    <div class="relative flex flex-col items-center justify-center w-full py-8 bg-gradient-to-b from-[#86735d] to-[#bb9447] text-white/70">
+    <a href="#" class="flex items-center flex-col justify-center text-2xl font-semibold text-background fancy">
+        <img src={assets.logo} class="h-20 mr-3 sm:h-17" alt="Landwind Logo"/>
+		SkinCare By Zahraa
     </a>
 
     <span class="block text-m text-center text-background">© 2021-2022 Landwind™. All Rights Reserved.

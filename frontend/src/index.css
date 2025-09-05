@@ -11,14 +11,14 @@
 
 .fancy{
   font-family: "Bonheur Royale", cursive;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   font-size: 30px;
 }
 
 .fancy-heavy{
   font-family: "Bonheur Royale", cursive;
-  font-weight: 500;
+  font-weight: 600;
   font-style: normal;
   font-size: 50px;
 }

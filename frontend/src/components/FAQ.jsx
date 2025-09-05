@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Title from "./Title";
+import RoundTitle from "./RoundTitle";
 
 const faqsData = [
   {
@@ -71,9 +72,11 @@ const FAQ = () => {
 
 
   return (
-    <div className="flex flex-col justify-center items-center mb-15 relative
+    <div className="flex flex-col justify-center items-center relative
   w-full mx-auto px-3 sm:px-4 md:px-11 lg:px-13 xl:px-12 2xl:px-16 max-w-screen-xl" id='dicover-more'>
-    
+  <RoundTitle 
+  title="FAQ"
+  />
   <Title
     title="Frequently Asked Questions"
     subtitle="Proactively answering FAQs boosts user confidence and cuts down on support tickets"
@@ -116,7 +119,7 @@ const FAQ = () => {
         </div>
 
         <p
-          className={`text-sm text-slate-500 px-4 transition-all text-center duration-500 ease-in-out ${
+          className={`text-sm text-primary px-4 transition-all text-center duration-500 ease-in-out ${
             openIndex === index
               ? "opacity-100 max-h-[300px] translate-y-0 pt-4"
               : "opacity-0 max-h-0 -translate-y-2"
