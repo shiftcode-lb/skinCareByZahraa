@@ -9,12 +9,14 @@ import Footer from '../components/Footer'
 import Map from '../components/Map'
 import Feedbacks from '../components/Feedbacks'
 import FAQ from '../components/FAQ'
+import WorkProcess from '../components/WorkProcess'
 
 const Home = () => {
   return (
     <div className='text-2xl font-bold'>
       <Hero />
       <Quote />
+      <WorkProcess />
       <Services />
       <FAQ />
       <Feedbacks />

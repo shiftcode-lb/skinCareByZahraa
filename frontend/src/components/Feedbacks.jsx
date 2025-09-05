@@ -8,6 +8,7 @@ import feedback5 from "../assets/images/feedbacks/feedback5.jpeg";
 import feedback6 from "../assets/images/feedbacks/feedback6.jpeg";
 import RoundTitle from "./RoundTitle";
 import Title from "./Title";
+import { assets } from "../assets/assets";
 
 const slideData = [
   { title: "Mystic Mountains", src: feedback1 },
@@ -39,7 +40,13 @@ const Feedbacks = () => {
   };
 
   return (
-    <section className="flex flex-col items-center px-3 sm:px-4 md:px-11 lg:px-13 xl:px-12 2xl:px-16">
+    <section className="flex flex-col items-center px-3 sm:px-4 md:px-11 lg:px-13 xl:px-12 2xl:px-16 relative">
+      <img
+      src={assets.back4}
+      alt="background image"
+      className="absolute right-[0px] sm:right-[0px] top-5/5 -translate-y-1/2 
+      lg:w-[20%] md:w-[30%] w-[40%] opacity-30 pointer-events-none select-none"
+    />
       {/* Title Section */}
       <RoundTitle 
       title="Feedbacks"

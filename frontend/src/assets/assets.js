@@ -29,6 +29,8 @@ import back2 from "./images/background/back2.png"
 import back3 from "./images/background/back3.png"
 import back4 from "./images/background/back4.png"
 import back5 from "./images/background/back5.png"
+import arrow1 from "./images/process1.png"
+import arrow2 from "./images/process2.png"
 
 export const assets = {
     feedback1,
@@ -61,7 +63,9 @@ export const assets = {
     back2,
     back3,
     back4,
-    back5
+    back5,
+    arrow1,
+    arrow2
 }
 
 
