@@ -5,7 +5,7 @@ import hydrafacial1 from "../assets/images/results/hydrafacial1.jpg";
 import hydrafacial2 from "../assets/images/results/hydrafacial2.jpg";
 
 
-export default function Result() {
+const Result= () => {
   const slides = [
   {
     title: "Acne Removal",
@@ -170,3 +170,5 @@ export default function Result() {
     </div>
   );
 }
+
+export default Result;
