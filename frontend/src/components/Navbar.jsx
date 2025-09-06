@@ -63,30 +63,27 @@ useEffect(() => {
         max-sm:border-t border-borderColor right-0 flex flex-col sm:flex-row items-start
         sm:items-center gap-4 sm:gap-8 max-sm:p-4 transition-all duration-300 mt-6 sm:mt-0
         ${open ? "max-sm:translate-x-0 bg-background flex max-sm:items-center max-sm:justify-start text-center z-0" : "max-sm:translate-x-full"}`}>
-            {menuLinks.map((link, index) => {
-  if (link.name === "Home") {
-    return (
-      <a
-        key={index}
-        href="#top"
-        onClick={() => setOpen(false)}
-        className="cursor-pointer font-semibold"
-      >
-        {link.name}
-      </a>
-    );
-  }
-  return (
-    <a
-      key={index}
-      href={link.path}
-      onClick={() => setOpen(false)}
-      className="cursor-pointer font-semibold"
-    >
-      {link.name}
-    </a>
-  );
-})}
+            {menuLinks.map((link, index) => (
+  <button
+    key={index}
+    onClick={() => {
+      setOpen(false); // close menu
+      if (link.name === "Home") {
+        // Scroll to top smoothly
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        // Scroll to section smoothly
+        const section = document.getElementById(link.path.replace("#", ""));
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    }}
+    className="cursor-pointer font-semibold bg-transparent border-none outline-none"
+  >
+    {link.name}
+  </button>
+))}
         </div>
         
         <button className='sm:hidden cursor-pointer'> 

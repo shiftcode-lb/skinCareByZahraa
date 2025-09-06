@@ -40,37 +40,52 @@ const Hero = () => {
 
         {/* CTA Button */}
         <div className="flex justify-center items-center mt-8">
-  <a
-    href="#pricing"
-    className="relative flex items-center justify-center px-6 py-3 border-2 border-primary rounded-full text-coprimary text-lg font-semibold
+  <button
+    onClick={() => {
+      const section = document.getElementById("book-now");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }}
+    className="relative flex items-center justify-center px-6 py-3 border-2 cursor-pointer border-primary rounded-full text-coprimary text-lg font-semibold
       bg-primary hover:bg-primary hover:border-primary shadow-lg transform hover:scale-105 transition duration-200"
   >
     <span className="relative">Book Now</span>
     {/* Optional ping effect */}
     <span className="absolute inset-0 rounded-full bg-primary opacity-50 animate-ping"></span>
-  </a>
+  </button>
 </div>
+
       </div>
 
       {/* Scroll Down */} 
-      <div className="absolute  bottom-[3vh] left-1/2 transform -translate-x-1/2 animate-bounce">
-        <a href="#about" className="cursor-pointer">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-10 w-10 text-primary"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            strokeWidth="2"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M19 9l-7 7-7-7"
-            />
-          </svg>
-        </a>
-      </div>
+      <div className="absolute bottom-[3vh] left-1/2 transform -translate-x-1/2 animate-bounce">
+  <button
+    onClick={() => {
+      const section = document.getElementById("process");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }}
+    className="cursor-pointer bg-transparent border-none outline-none"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-10 w-10 text-primary"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      strokeWidth="2"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M19 9l-7 7-7-7"
+      />
+    </svg>
+  </button>
+</div>
+
     </div>
   )
 }

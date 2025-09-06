@@ -16,14 +16,14 @@ import Result from '../components/Results'
 
 const Home = () => {
   return (
-    <div className='text-2xl font-bold'>
+    <div className='text-2xl '>
       <Hero />
       <Quote />
       <WorkProcess />
       <Services />
       <Result />
-      <FAQ />
       <Feedbacks />
+      <FAQ />
       <Pricing />
       <Map />
       <BookNow />

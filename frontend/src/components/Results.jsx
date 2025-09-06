@@ -72,8 +72,8 @@ const Result= () => {
       title="Real Transformations, Real Confidence"
       subtitle="Visible results from personalized skincare treatments"
       />
-      <div className="flex items-center justify-center overflow-hidden relative mt-10">
-      <div className="fixed inset-0 -z-10">
+      <div className="flex items-center justify-center overflow-hidden relative mt-10" >
+      <div className="fixed inset-0 -z-10" data-aos="fade-up" data-aos-delay="300">
         <div className="absolute inset-0 bg-gradient-to-br from-violet-900/20 via-purple-900/20 to-fuchsia-900/20" />
         <div className="absolute top-1/4 left-1/4 w-48 h-48 sm:w-96 sm:h-96 bg-violet-500/10 rounded-full filter blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 w-48 h-48 sm:w-96 sm:h-96 bg-fuchsia-500/10 rounded-full filter blur-3xl" />
@@ -157,7 +157,7 @@ const Result= () => {
               key={index}
               onClick={() => setCurrent(index)}
               className={`w-8 sm:w-12 h-1 sm:h-1.5 rounded-full transition-colors ${
-                index === current ? "bg-white/40" : "bg-white/20 hover:bg-white/60"
+                index === current ? "bg-[#8e7b66]" : "bg-[#c4b494]"
               }`}
             />
           ))}

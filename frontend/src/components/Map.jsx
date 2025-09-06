@@ -13,7 +13,7 @@ const Map = () => {
             title={"Location and Contact"}
             subtitle={"Visit our location! Welcome"}
           />
-          <div className="flex flex-col md:flex-row gap-10 w-full mt-10">
+          <div className="flex flex-col md:flex-row gap-10 w-full mt-10" data-aos="fade-up" data-aos-delay="300">
             {/* Info Card */}
             <div className="h-full md:w-1/2 w-full">
               <div className="rounded-lg bg-primary shadow flex flex-col h-full">
@@ -28,10 +28,10 @@ const Map = () => {
 
                 {/* Address */}
                 <div className="px-6 py-3 border-t border-gray-200 flex-1">
-                  <h3 className="text-base font-medium text-gray-900">
+                  <h3 className="text-lg text-coprimary font-bold">
                     Our Address
                   </h3>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-background">
                     Chiah, Asaad l Asaad Street, Kanj – 1st floor, بناية النصر,
                     clinic
                   </p>

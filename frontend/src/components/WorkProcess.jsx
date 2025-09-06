@@ -31,7 +31,7 @@ const WorkProcess = () => {
 
   return (
 
-      <div className="px-3 sm:px-4 md:px-11 lg:px-13 xl:px-12 2xl:px-16 max-w-screen-xl mx-auto">
+      <div className="px-3 sm:px-4 md:px-11 lg:px-13 xl:px-12 2xl:px-16 max-w-screen-xl mx-auto" id="process">
         {/* Section Header */}
         <RoundTitle title="Work Process" />
         <Title
@@ -40,7 +40,7 @@ const WorkProcess = () => {
         />
 
         {/* Steps Grid */}
-        <div className="grid lg:grid-cols-3 gap-x-6 gap-y-12.5 lg:pt-15 pt-0 relative mt-10">
+        <div className="grid lg:grid-cols-3 gap-x-6 gap-y-12.5 lg:pt-15 pt-0 relative mt-10" >
           {steps.map((item, i) => (
             <ProcessCard key={i} {...item} />
           ))}

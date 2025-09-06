@@ -6,15 +6,6 @@ import feedback5 from "./images/feedbacks/feedback5.jpeg"
 import feedback6 from "./images/feedbacks/feedback6.jpeg"
 import acne from "./images/results/acne2.JPG"
 import hydrafacial from "./images/results/hydrafacial2.JPG"
-import workshop from "./images/computer.png"
-import location from "./images/location.png"
-import needle from "./images/needle.png"
-import prices from "./images/prices.png"
-import reviews from "./images/reviews.png"
-import hero from "./images/Skincare-pana.png"
-import skincare from "./images/skincare.png"
-import tips from "./images/tips.png"
-import toDo from "./images/toDo.png"
 import logo from "./images/logo1.png"
 import logo_sm from "./images/logo-sm.png"
 import close_icon from "./images/close_icon.svg";
@@ -40,15 +31,6 @@ export const assets = {
     hydrafacial,
     facial,
     micro,
-    workshop,
-    location,
-    needle,
-    prices,
-    reviews,
-    hero,
-    skincare,
-    tips,
-    toDo,
     logo,
     logo_sm,
     menu_icon,
@@ -65,9 +47,9 @@ export const assets = {
 
 export const menuLinks = [
     {name: "Home", path: "#top"},
-    {name: "About", path: "#about"},
     {name:"Services", path: "#services"},
+    {name: "FAQ", path: "#faq"},
     {name: "Pricing", path: "#pricing"},
-    {name: "Contact Us", path:"#contact-us"}
+    {name: "Contact Us", path:"#book-now"}
 ];
 

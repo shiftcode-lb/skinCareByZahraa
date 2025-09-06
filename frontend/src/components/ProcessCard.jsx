@@ -3,7 +3,7 @@ import React from "react";
 
 const ProcessCard = ({ icon, step, title, desc, shape }) => {
   return (
-    <div className="flex flex-col items-center text-center relative sm:px-[25px] px-0">
+    <div className="flex flex-col items-center text-center relative sm:px-[25px] px-0" data-aos="fade-up" data-aos-delay="300">
       {shape && (
         <div className="absolute top-0 left-[-110px] opacity-50 lg:block hidden">
           <img src={shape} alt="shape" />

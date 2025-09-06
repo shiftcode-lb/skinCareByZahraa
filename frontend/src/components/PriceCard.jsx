@@ -1,8 +1,8 @@
 import React from "react";
 
-const PriceCard = ({ title, price, period, buttonText, features }) => {
+const PriceCard = ({ title, price, period, buttonText, features, onBook }) => {
   return (
-    <div className="bg-white border-2 rounded-lg shadow-md w-full max-w-sm mx-auto border-borderColor">
+    <div className="bg-white border-2 rounded-lg shadow-md w-full max-w-sm mx-auto border-borderColor " data-aos="fade-up" data-aos-delay="300">
       <div className="p-6">
         <div className="flex items-center">
           <h2 className="text-xl uppercase font-bold leading-6 text-primary">
@@ -17,7 +17,7 @@ const PriceCard = ({ title, price, period, buttonText, features }) => {
         </p>
         <div className="relative">
           <div className="flex-col">
-            <button className="text-sm shadow-lg mt-3 block w-full rounded-md border border-borderColor 
+            <button onClick={onBook ? onBook : () => {}} className="text-sm shadow-lg mt-3 block w-full rounded-md border border-borderColor 
             bg-primary hover:bg-primary hover:border-primary transform hover:scale-103 transition duration-200 py-2 text-center  font-semibold text-coprimary cursor-pointer ">
               {buttonText}
             </button>
@@ -32,7 +32,7 @@ const PriceCard = ({ title, price, period, buttonText, features }) => {
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" class="w-6 h-6">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
-              <span className=" text-primary text-sm  md:text-xl">{feature}</span>
+              <span className=" text-primary text-sm  md:text-">{feature}</span>
             </li>
           ))}
         </ul>
