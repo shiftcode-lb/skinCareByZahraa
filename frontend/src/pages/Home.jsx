@@ -6,7 +6,6 @@ import FAQ from '../components/FAQ'
 import Workshop from '../components/Workshop'
 import Feedbacks from '../components/Feedbacks'
 import Map from '../components/Map'
-import Result from '../components/Results'
 
 const Home = () => {
   return (
@@ -16,7 +15,6 @@ const Home = () => {
       subtitle="asdasdadasahjdyjuashdikujasuhjdajkbghdad"
       />
       <Feedbacks/>
-      <Result/>
       <FAQ/>
       <Workshop/>
       <Map/>
