@@ -27,17 +27,17 @@ const Services = () => {
     {
       icon: "ri-drop-fill",
       title: "Peels",
-      desc: "Exfoliating solutions that unclog pores, smooth texture, and renew the skin’s surface.",
+      desc: "Exfoliating solutions that unclog pores and renew the skin’s surface.",
     },
     {
       icon: "ri-leaf-fill",
       title: "Pure Algae Peel",
-      desc: "Natural peel rich in minerals that detoxifies, calms, and revitalizes without harsh chemicals.",
+      desc: "Natural peel rich in minerals that detoxifies and revitalizes without harsh chemicals.",
     },
     {
       icon: "ri-fire-fill",
       title: "TCA Peel",
-      desc: "Advanced peel targeting deeper layers to improve pigmentation, wrinkles, and skin tone.",
+      desc: "Advanced peel targeting deeper layers to improve wrinkles and skin tone.",
     },
   ];
 
