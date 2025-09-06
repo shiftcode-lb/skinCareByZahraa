@@ -103,7 +103,7 @@ const Feedbacks = () => {
             key={index}
             onClick={() => setCurrent(index)}
             className={`w-3 h-3 rounded-full cursor-pointer transition-all ${
-              current === index ? "bg-gray-800 scale-110" : "bg-gray-400"
+              current === index ? "bg-[#8e7b66]" : "bg-[#c4b494]"
             }`}
           ></div>
         ))}

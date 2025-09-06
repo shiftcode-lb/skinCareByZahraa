@@ -5,7 +5,7 @@ import RoundTitle from "./RoundTitle";
 
 const Map = () => {
   return (
-      <div className="px-3 sm:px-4 md:px-11 lg:px-12 xl:px-12 2xl:px-16 my-10">
+      <div className="px-3 sm:px-4 md:px-11 lg:px-12 xl:px-12 2xl:px-16 my-10 max-w-screen-xl mx-auto">
           <RoundTitle 
           title="Location"
           />
@@ -26,33 +26,6 @@ const Map = () => {
                   <p className="text-sm text-background">Sunday: Closed</p>
                 </div>
 
-                {/* Contact */}
-                <div className="px-6 py-3 border-t border-gray-200">
-                  <h3 className="text-base font-medium text-gray-900">Contact</h3>
-                  <p className="text-sm text-gray-600">
-                    Email:{" "}
-                    <a
-                      href="https://mail.google.com/mail/?view=cm&fs=1&to=atallahzahraa7@gmail.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-600 hover:underline"
-                    >
-                      atallahzahraa7@gmail.com
-                    </a>
-                  </p>
-                  <p className="text-sm text-gray-600">
-                    Phone:{" "}
-                    <a
-                      href="https://wa.me/96176873779"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-green-600 hover:underline"
-                    >
-                      +961 76 873 779
-                    </a>
-                  </p>
-                </div>
-
                 {/* Address */}
                 <div className="px-6 py-3 border-t border-gray-200 flex-1">
                   <h3 className="text-base font-medium text-gray-900">
@@ -69,7 +42,7 @@ const Map = () => {
                   <img
                     src={appartment}
                     alt="Location"
-                    className="w-full h-32 object-cover rounded-lg"
+                    className="w-full h-full object-cover rounded-lg"
                   />
                 </div>
               </div>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Title from "./Title";
 import RoundTitle from "./RoundTitle";
+import { assets } from "../assets/assets";
 
 const faqsData = [
   {
@@ -73,7 +74,11 @@ const FAQ = () => {
 
   return (
     <div className="flex flex-col justify-center items-center relative
-  w-full mx-auto px-3 sm:px-4 md:px-11 lg:px-13 xl:px-12 2xl:px-16 max-w-screen-xl" id='dicover-more'>
+    w-full mx-auto px-3 sm:px-4 md:px-11 lg:px-13 xl:px-12 2xl:px-16 max-w-screen-xl">
+    <img src={assets.back3} alt="" 
+    className="absolute left-0 top-2/5 -translate-y-1/2 
+      lg:w-[20%] md:w-[30%] w-[40%] opacity-30 pointer-events-none select-none"
+    />
   <RoundTitle 
   title="FAQ"
   />

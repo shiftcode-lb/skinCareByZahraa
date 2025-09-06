@@ -23,7 +23,6 @@ import logo from "./images/logo1.png"
 import logo_sm from "./images/logo-sm.png"
 import close_icon from "./images/close_icon.svg";
 import menu_icon from "./images/menu_icon.svg";
-import owner from "./images/owner.png"
 import back1 from "./images/background/back1.png"
 import back2 from "./images/background/back2.png"
 import back3 from "./images/background/back3.png"
@@ -58,7 +57,6 @@ export const assets = {
     logo_sm,
     menu_icon,
     close_icon,
-    owner,
     back1,
     back2,
     back3,

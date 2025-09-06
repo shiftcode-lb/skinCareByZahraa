@@ -13,9 +13,14 @@
   font-family: "Bonheur Royale", cursive;
   font-weight: 500;
   font-style: normal;
-  font-size: 30px;
+  font-size: 35px;
 }
-
+.fancy-title{
+  font-family: "Bonheur Royale", cursive;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 28px;
+}
 .fancy-heavy{
   font-family: "Bonheur Royale", cursive;
   font-weight: 500;

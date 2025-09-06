@@ -10,6 +10,8 @@ import Map from '../components/Map'
 import Feedbacks from '../components/Feedbacks'
 import FAQ from '../components/FAQ'
 import WorkProcess from '../components/WorkProcess'
+import BookNow from '../components/BookNow'
+import Pricing from '../components/Pricing'
 
 const Home = () => {
   return (
@@ -20,7 +22,9 @@ const Home = () => {
       <Services />
       <FAQ />
       <Feedbacks />
+      <Pricing />
       <Map />
+      <BookNow />
       <Footer />
     </div>
   )

@@ -55,11 +55,11 @@ useEffect(() => {
   className=" cursor-pointer w-[75px] h-[75px]" 
   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
 />
-      <p className='ml-3 text-center text-xl fancy'>
+      <p className='ml-3 text-center text-xl fancy-title'>
         Skin Care By Zahraa
       </p>
 </div>
-        <div className={`max-sm:fixed max-sm:h-screen max-sm:w-full max-sm:top-18 inset-0 relative
+        <div className={`max-sm:fixed max-sm:h-screen max-sm:w-full max-sm:top-18
         max-sm:border-t border-borderColor right-0 flex flex-col sm:flex-row items-start
         sm:items-center gap-4 sm:gap-8 max-sm:p-4 transition-all duration-300 mt-6 sm:mt-0
         ${open ? "max-sm:translate-x-0 bg-background flex max-sm:items-center max-sm:justify-start text-center z-0" : "max-sm:translate-x-full"}`}>
@@ -92,7 +92,7 @@ useEffect(() => {
         <button className='sm:hidden cursor-pointer'> 
             <img 
             onClick={() => setOpen(!open)}
-            src={open ? assets.close_icon : assets.menu_icon} alt="menu" />
+            src={open ? assets.close_icon : assets.menu_icon} alt="menu"/>
         </button>
 
     </div>

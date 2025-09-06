@@ -8,12 +8,12 @@ const Quote = () => {
        
     <h3 className="text-coprimary fancy-heavy"
         style={{
-          fontSize: "clamp(1.75rem, 2.5vw + 1rem, 3rem)",
+          fontSize: "clamp(1.75rem, 2.5vw + 1.5rem, 3rem)",
           lineHeight: "clamp(2.25rem, 3vw + 1rem, 3.75rem)"
         }}>
       Your skin tells your story, and it deserves the best care. At Skin Care by Zahraa,
       every treatment is designed with love, science, and precision — to help you restore balance, 
-      enhance radiance, and feel as confident on the outside as you are within.
+      enhance radiance, and feel as confident on the outside as you are within
     </h3>
 
     <div className="pt-12.5 flex flex-col items-center">
