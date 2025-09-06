@@ -84,13 +84,13 @@ const Feedbacks = () => {
         {/* Controls */}
         <button
           onClick={prevSlide}
-          className="absolute cursor-pointer left-4 top-1/2 -translate-y-1/2 text-black rounded-full p-3 bg-white shadow"
+          className="absolute cursor-pointer left-4 top-1/2 -translate-y-1/2 text-black rounded-full p-3"
         >
           ◀
         </button>
         <button
           onClick={nextSlide}
-          className="absolute cursor-pointer right-4 top-1/2 -translate-y-1/2 text-black rounded-full p-3 bg-white shadow"
+          className="absolute cursor-pointer right-4 top-1/2 -translate-y-1/2 text-black rounded-full p-3"
         >
           ▶
         </button>
