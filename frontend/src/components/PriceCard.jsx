@@ -1,0 +1,44 @@
+import React from "react";
+
+const PriceCard = ({ title, price, period, buttonText, features }) => {
+  return (
+    <div className="bg-white border-2 rounded-lg shadow-md w-full max-w-sm mx-auto border-borderColor">
+      <div className="p-6">
+        <div className="flex items-center">
+          <h2 className="text-xl uppercase font-bold leading-6 text-primary">
+            {title}
+          </h2>
+        </div>
+        <p className="my-4 text-4xl font-bold tracking-tight text-gray-900">
+          ${price}
+          <span className="text-base font-medium text-gray-500 ml-1">
+            {period}
+          </span>
+        </p>
+        <div className="relative">
+          <div className="flex-col">
+            <button className="text-sm shadow-lg mt-3 block w-full rounded-md border border-borderColor 
+            bg-primary hover:bg-primary hover:border-primary transform hover:scale-103 transition duration-200 py-2 text-center  font-semibold text-coprimary cursor-pointer ">
+              {buttonText}
+            </button>
+          </div>
+        </div>
+      </div>
+      <div className="px-6 pt-6 pb-8 border-t">
+        <h3 className="text-sm font-medium text-gray-900">What's included</h3>
+        <ul role="list" className="mt-6 space-y-4">
+          {features.map((feature, i) => (
+            <li key={i} className="flex space-x-3 items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+              <span className=" text-primary text-sm  md:text-xl">{feature}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export default PriceCard;

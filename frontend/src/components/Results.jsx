@@ -1,38 +1,29 @@
 import React, { useState, useEffect, useRef } from "react";
-import acne1 from "../assets/images/results/acne1.jpg";
-import acne2 from "../assets/images/results/acne2.jpg";
-import hydrafacial1 from "../assets/images/results/hydrafacial1.jpg";
-import hydrafacial2 from "../assets/images/results/hydrafacial2.jpg";
+import RoundTitle from "./RoundTitle";
+import Title from "./Title";
+import { assets } from "../assets/assets";
 
 
 const Result= () => {
   const slides = [
   {
     title: "Acne Removal",
-    description:
-      "Noticeably clearer skin with reduced breakouts and a smoother overall texture.",
-    image: acne1,
+    image: assets.acne,
     // overlay: "from-violet-500/40 to-purple-500/40",
   },
   {
-    title: "Acne Removal",
-    description:
-      "Minimized appearance of acne scars and redness, leaving skin looking healthier and more even-toned.",
-    image: acne2,
+    title: "HydraFacial",
+    image: assets.hydrafacial,
     // overlay: "from-fuchsia-500/40 to-pink-500/40",
   },
   {
-    title: "HydraFacial",
-    description:
-      "Deeply hydrated skin with improved elasticity and a radiant, refreshed glow.",
-    image: hydrafacial1,
+    title: "Facial",
+    image: assets.facial,
     // overlay: "from-pink-500/40 to-rose-500/40",
   },
   {
-    title: "HydraFacial",
-    description:
-      "Pores appear cleaner and smaller, while fine lines and dullness are visibly reduced.",
-    image: hydrafacial2,
+    title: "Microneedling",
+    image: assets.micro,
     // overlay: "from-pink-500/40 to-rose-500/40",
   },
 ];
@@ -72,8 +63,16 @@ const Result= () => {
   };
 
   return (
-    <div className="bg-black min-h-screen flex items-center justify-center overflow-hidden p-4 sm:p-8 relative">
+    <div className="mx-auto px-3 sm:px-4 md:px-11 lg:px-13 xl:px-12 2xl:px-16 max-w-screen-xl">
       {/* Background effects */}
+      <RoundTitle 
+      title="Before & After"
+      />
+      <Title 
+      title="Real Transformations, Real Confidence"
+      subtitle="Visible results from personalized skincare treatments"
+      />
+      <div className="flex items-center justify-center overflow-hidden relative mt-10">
       <div className="fixed inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-br from-violet-900/20 via-purple-900/20 to-fuchsia-900/20" />
         <div className="absolute top-1/4 left-1/4 w-48 h-48 sm:w-96 sm:h-96 bg-violet-500/10 rounded-full filter blur-3xl" />
@@ -84,7 +83,7 @@ const Result= () => {
         {/* Progress bar */}
         <div className="absolute top-0 left-0 right-0 h-1 bg-white/10 rounded-full overflow-hidden z-20">
           <div
-            className="progress-bar absolute top-0 left-0 h-full bg-gradient-to-r from-violet-500 to-fuchsia-500 transition-all duration-500"
+            className="progress-bar absolute top-0 left-0 h-full bg-gradient-to-r from-coprimary to-primary transition-all duration-500"
             style={{ width: `${((current + 1) / slides.length) * 100}%` }}
           />
         </div>
@@ -143,9 +142,6 @@ const Result= () => {
                       <h3 className="text-white text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3">
                         {slide.title}
                       </h3>
-                      <p className="text-gray-200 text-sm sm:text-base md:text-lg max-w-2xl">
-                        {slide.description}
-                      </p>
                     </div>
                   </div>
                 </div>
@@ -167,6 +163,7 @@ const Result= () => {
           ))}
         </div>
       </div>
+       </div>
     </div>
   );
 }

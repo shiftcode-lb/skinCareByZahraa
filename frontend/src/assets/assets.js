@@ -4,12 +4,8 @@ import feedback3 from "./images/feedbacks/feedback3.jpeg"
 import feedback4 from "./images/feedbacks/feedback4.jpeg"
 import feedback5 from "./images/feedbacks/feedback5.jpeg"
 import feedback6 from "./images/feedbacks/feedback6.jpeg"
-import acne1 from "./images/results/acne1.JPG"
-import acne2 from "./images/results/acne2.JPG"
-import acne3 from "./images/results/acne3.JPG"
-import hydrafacial1 from "./images/results/hydrafacial1.JPG"
-import hydrafacial2 from "./images/results/hydrafacial2.JPG"
-import hydrafacial3 from "./images/results/hydrafacial3.JPEG"
+import acne from "./images/results/acne2.JPG"
+import hydrafacial from "./images/results/hydrafacial2.JPG"
 import workshop from "./images/computer.png"
 import location from "./images/location.png"
 import needle from "./images/needle.png"
@@ -30,6 +26,8 @@ import back4 from "./images/background/back4.png"
 import back5 from "./images/background/back5.png"
 import arrow1 from "./images/process1.png"
 import arrow2 from "./images/process2.png"
+import facial from "./images/results/facial.jpeg"
+import micro from "./images/results/micro.jpeg"
 
 export const assets = {
     feedback1,
@@ -38,12 +36,10 @@ export const assets = {
     feedback4,
     feedback5,
     feedback6,
-    acne1,
-    acne2,
-    acne3,
-    hydrafacial1,
-    hydrafacial2,
-    hydrafacial3,
+    acne,
+    hydrafacial,
+    facial,
+    micro,
     workshop,
     location,
     needle,

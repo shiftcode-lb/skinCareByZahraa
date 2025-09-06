@@ -33,6 +33,9 @@ const BookNow = () => {
             Instagram DM
           </a>
         </div>
+        <p className="text-sm max-w-2xl mx-auto mt-6 text-black">
+          <span className="font-extrabold">Note:</span> Please send ur full name,date and time that..works with u, and i send u the available spots
+        </p>
       </div>
     </div>
   );

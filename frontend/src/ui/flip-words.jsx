@@ -44,7 +44,11 @@ export const FlipWords = ({
           stiffness: 100,
           damping: 10,
         }}
-        
+        exit={
+          {
+            
+          }
+        }
         className={cn(
           " inline-block relative text-left text-primary px-2",
           className

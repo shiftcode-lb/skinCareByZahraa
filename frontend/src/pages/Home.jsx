@@ -12,6 +12,7 @@ import FAQ from '../components/FAQ'
 import WorkProcess from '../components/WorkProcess'
 import BookNow from '../components/BookNow'
 import Pricing from '../components/Pricing'
+import Result from '../components/Results'
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
       <Quote />
       <WorkProcess />
       <Services />
+      <Result />
       <FAQ />
       <Feedbacks />
       <Pricing />

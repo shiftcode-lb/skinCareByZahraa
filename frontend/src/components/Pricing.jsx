@@ -2,13 +2,41 @@ import React from "react";
 import RoundTitle from "./RoundTitle";
 import Title from "./Title";
 import Tabs from "./Tabs";
+import PriceCard from "./PriceCard";
+const Pricing = () => {
 
-const Pricing = () => { 
   const tabs = [
     {
       id: "facials",
       label: "Facials",
-      content: <p>Facial treatment price list goes here...</p>,
+      content: (
+      <div className="mt-12 grid gap-6 sm:mt-16 sm:grid-cols-2 lg:grid-cols-2 w-full">
+        <PriceCard
+          title="Facial Bundle 1"
+          price="40"
+          period="/session"
+          buttonText="Book Now"
+          features={[
+            "Deep cleaning",
+            "Hydrafacial",
+            "Smart Peel",
+            "Soothing Mask"
+          ]}
+        />
+        <PriceCard
+          title="Facial Bundle 2"
+          price="40"
+          period="/session"
+          buttonText="Book Now"
+          features={[
+            "Deep cleaning",
+            "Hydrafacial",
+            "Soothing Mask",
+            "Vitamin Mask"
+          ]}
+        />
+      </div>
+    )
     },
     {
       id: "glow",
