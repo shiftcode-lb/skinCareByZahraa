@@ -11,7 +11,7 @@
     {title}
   </h1>
   <p
-  className="fancy text-primary mt-2
+  className=" text-primary mt-2
     text-[clamp(1rem, 1vw + 0.75rem, 2rem)]
     leading-[clamp(1.5rem, 1.5vw + 0.75rem, 2.5rem)]"
   >

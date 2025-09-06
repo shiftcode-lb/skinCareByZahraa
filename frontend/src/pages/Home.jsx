@@ -16,7 +16,7 @@ import Result from '../components/Results'
 
 const Home = () => {
   return (
-    <div className='text-2xl '>
+    <div className=' '>
       <Hero />
       <Quote />
       <WorkProcess />

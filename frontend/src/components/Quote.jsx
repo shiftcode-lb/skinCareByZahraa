@@ -6,7 +6,7 @@ const Quote = () => {
   <div className="lg:w-[100%] w-full text-center mx-auto bg-black-200 lg:py-[70px] lg:px-20 py-10 px-10 lg:rounded-[40px] rounded-[30px] fadeInUp bg-primary"
        data-delay="0.2">
        
-    <h3 className="text-coprimary fancy-heavy"
+    <h3 className="text-coprimary"
         style={{
           fontSize: "clamp(1.75rem, 2.5vw + 1.5rem, 3rem)",
           lineHeight: "clamp(2.25rem, 3vw + 1rem, 3.75rem)"
