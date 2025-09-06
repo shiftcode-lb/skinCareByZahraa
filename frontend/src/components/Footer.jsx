@@ -13,7 +13,7 @@ const Footer = () => {
       </div>
       
       <span className="block text-sm text-center text-background mt-5">
-        © {new Date().getFullYear()} ShiftCode. All Rights Reserved.
+        © {new Date().getFullYear()} <a href="https://shiftcode.org">ShiftCode</a>. All Rights Reserved.
       </span>
     </div>
   );
