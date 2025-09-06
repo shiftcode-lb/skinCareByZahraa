@@ -4,9 +4,9 @@ import { FlipWords } from "../ui/flip-words";
 import { assets } from "../assets/assets";
 
 const Hero = () => {
-  const words = ["glow", "confidence", "radiance", "beauty"]
+  const words = ["GLOW", "CONFIDENCE", "RADIANCE", "BEAUTY"]
   return (
-    <div className="flex flex-col gap-10 justify-center  md:flex-row items-center min-h-[100vh] relative
+    <div className="flex flex-col gap-10 justify-center  md:flex-row items-center min-h-[95vh] relative
     w-full mx-auto px-3 sm:px-4 md:px-11 lg:px-13 xl:px-12 2xl:px-16 max-w-screen-xl pt-15">
       
       <img src={assets.back1} alt="background image" 
