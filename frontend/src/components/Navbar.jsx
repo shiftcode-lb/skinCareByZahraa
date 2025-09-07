@@ -64,7 +64,7 @@ const Navbar = () => {
             alt="Navbar Logo"
             className="w-[75px] h-[75px]"
           />
-          <p className="ml-3 text-center sm:text-3xl text-2xl fancy-title">
+          <p className="ml-3 text-center sm:text-3xl text-xl fancy-title">
             Skin Care By Zahraa
           </p>
         </div>

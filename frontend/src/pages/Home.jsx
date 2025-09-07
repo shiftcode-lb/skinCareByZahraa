@@ -14,12 +14,14 @@ import BookNow from '../components/BookNow'
 import Pricing from '../components/Pricing'
 import Result from '../components/Results'
 import WcSection from '../components/WcSection'
+import AboutUs from '../components/AboutUs'
 
 const Home = () => {
   return (
     <div className=' '>
       <Hero />
       <Quote />
+      <AboutUs />
       <WorkProcess />
       <Services />
       <WcSection />

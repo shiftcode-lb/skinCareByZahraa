@@ -3,6 +3,7 @@ import Footer from '../components/Footer'
 import BookNow from '../components/BookNow'
 import WorkshopContent from '../components/WorkshopContent'
 import Title from '../components/Title'
+import Map from '../components/Map'
 
 const Workshop = () => {
   return (
@@ -12,6 +13,7 @@ const Workshop = () => {
         />
       <WorkshopContent />
       <BookNow />
+      <Map />
       <Footer />
     </div>
   )

@@ -62,7 +62,7 @@ const Hero = () => {
       <div className="absolute bottom-[3vh] left-1/2 transform -translate-x-1/2 animate-bounce">
   <button
     onClick={() => {
-      const section = document.getElementById("process");
+      const section = document.getElementById("about-me");
       if (section) {
         section.scrollIntoView({ behavior: "smooth" });
       }
