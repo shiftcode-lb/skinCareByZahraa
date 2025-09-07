@@ -33,7 +33,7 @@ const Hero = () => {
           </span>{" "}
         </h1>
 
-        <p className="mx-auto mb-8  text-3xl">
+        <p className="mx-auto mb-8 text-xl md:text-3xl">
           Professional skincare treatments to help you glow with confidence and embrace
           your natural beauty.
         </p>
@@ -47,7 +47,7 @@ const Hero = () => {
         section.scrollIntoView({ behavior: "smooth" });
       }
     }}
-    className="relative flex items-center justify-center px-6 py-3 border-2 cursor-pointer border-primary rounded-full text-coprimary text-lg font-semibold
+    className="relative flex items-center justify-center px-6 py-3 border-2 cursor-pointer border-primary rounded-full text-background text-lg font-semibold
       bg-primary hover:bg-primary hover:border-primary shadow-lg transform hover:scale-105 transition duration-200"
   >
     <span className="relative">Book Now</span>

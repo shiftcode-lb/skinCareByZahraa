@@ -17,18 +17,10 @@ const Map = () => {
             {/* Info Card */}
             <div className="h-full md:w-1/2 w-full">
               <div className="rounded-lg bg-primary shadow flex flex-col h-full">
-                
-                {/* Hours */}
-                <div className="px-6 py-3">
-                  <h3 className="text-lg text-coprimary font-bold">Hours</h3>
-                  <p className="text-sm text-background">Mon - Fri: 9am - 5pm</p>
-                  <p className="text-sm text-background">Sat: 10am - 4pm</p>
-                  <p className="text-sm text-background">Sunday: Closed</p>
-                </div>
 
                 {/* Address */}
-                <div className="px-6 py-3 border-t border-gray-200 flex-1">
-                  <h3 className="text-lg text-coprimary font-bold">
+                <div className="px-6 py-10 border-t border-gray-200 flex-1 text-center ">
+                  <h3 className="text-lg text-coprimary font-bold mb-2">
                     Our Address
                   </h3>
                   <p className="text-sm text-background">

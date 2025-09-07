@@ -20,7 +20,7 @@ const Tabs = ({ tabs }) => {
     >
       {tab.label}
       {tab.badge && (
-        <span className="ml-2 inline-block rounded-full bg-white bg-opacity-30 px-2 py-1 text-[10px] font-medium">
+        <span className="ml-2 inline-block rounded-full bg-white bg-opacity-30 px-2 py-1 text-[10px] font-medium border border-borderColor">
           {tab.badge}
         </span>
       )}

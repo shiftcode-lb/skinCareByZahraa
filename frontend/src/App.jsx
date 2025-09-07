@@ -6,6 +6,9 @@ import Home from './pages/Home';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Workshop from './pages/Workshop';
+import Consultation from './pages/Consultation'
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
   useEffect(() => {
@@ -17,8 +20,11 @@ const App = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
+      <ScrollToTop />
       <Routes>
         <Route path='/' element={<Home />}/>
+        <Route path='/workshop' element = {<Workshop />}/>
+        <Route path='/consultation' element = {<Consultation />}/>
       </Routes>
     </div>
   )

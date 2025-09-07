@@ -1,7 +1,6 @@
 import React from "react";
-import Title from "./Title";
 
-const Workshop = () => {
+const WorkshopContent = () => {
 
   const cards = [
     {
@@ -37,16 +36,8 @@ const Workshop = () => {
   ];
 
   return (
-  <div className="px-3 sm:px-4 md:px-11 lg:px-13 xl:px-12 2xl:px-16">
+  <div className="px-3 sm:px-4 md:px-11 lg:px-13 xl:px-12 2xl:px-16 max-w-screen-xl mx-auto">
     <div className="">
-      {/* Section Header */}
-      <h3 className="border border-[#bebebe] py-2.5 px-5 rounded-3xl md:text-base text-sm inline-block font-normal mb-[5px]">
-        <i className="ri-sparkling-fill text-primary"></i> Skincare Training
-      </h3>
-      <Title 
-      title="Services"
-      subtitle="Experience expert care, advanced techniques, and treatments tailored just for you"
-      />
 
       {/* Grid Section */}
       <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-x-6 gap-y-7.5 max-w-6xl mx-auto mt-10">
@@ -66,4 +57,4 @@ const Workshop = () => {
 );
 }
 
-export default Workshop;
+export default WorkshopContent;

@@ -2,7 +2,7 @@ import React from "react";
 
 const PriceCard = ({ title, price, period, buttonText, features, onBook }) => {
   return (
-    <div className="bg-white border-2 rounded-lg shadow-md w-full max-w-sm mx-auto border-borderColor " data-aos="fade-up" data-aos-delay="300">
+    <div className="bg-white border-2 rounded-lg shadow-md w-full h-[495px] max-w-sm mx-auto border-borderColor " data-aos="fade-up" data-aos-delay="300">
       <div className="p-6">
         <div className="flex items-center">
           <h2 className="text-xl uppercase font-bold leading-6 text-primary">
@@ -18,7 +18,7 @@ const PriceCard = ({ title, price, period, buttonText, features, onBook }) => {
         <div className="relative">
           <div className="flex-col">
             <button onClick={onBook ? onBook : () => {}} className="text-sm shadow-lg mt-3 block w-full rounded-md border border-borderColor 
-            bg-primary hover:bg-primary hover:border-primary transform hover:scale-103 transition duration-200 py-2 text-center  font-semibold text-coprimary cursor-pointer ">
+            bg-primary hover:bg-primary hover:border-primary transform hover:scale-103 transition duration-200 py-2 text-center  font-semibold text-background cursor-pointer ">
               {buttonText}
             </button>
           </div>

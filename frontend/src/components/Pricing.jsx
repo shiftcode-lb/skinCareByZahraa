@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import { assets } from "../assets/assets";
 
 const Pricing = () => {
   const scrollToBookNow = () => {
@@ -95,7 +96,11 @@ const Pricing = () => {
   ];
 
   return (
-    <div className="px-3 sm:px-4 md:px-11 lg:px-12 xl:px-12 2xl:px-16 my-10 max-w-screen-xl mx-auto" id="pricing">
+    <div className="relative px-3 sm:px-4 md:px-11 lg:px-12 xl:px-12 2xl:px-16 my-10 max-w-screen-xl mx-auto" id="pricing">
+      <img src={assets.back2} 
+      className="absolute right-0 top-2/5 -translate-y-1/2 
+      lg:w-[20%] md:w-[30%] w-[40%] opacity-30 pointer-events-none"
+      />
       <RoundTitle title="Our Treatments & Prices" />
       <Title
         title="Invest in Your Skin"

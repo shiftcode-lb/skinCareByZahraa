@@ -3,8 +3,7 @@ import { assets } from '../assets/assets'
 const Quote = () => {
   return (
     <div className='w-full mx-auto px-3 sm:px-4 md:px-11 lg:px-13 xl:px-12 2xl:px-16 max-w-screen-xl' data-aos="fade-up" data-aos-delay="300">
-  <div className="lg:w-[100%] w-full text-center mx-auto bg-black-200 lg:py-[70px] lg:px-20 py-10 px-10 lg:rounded-[40px] rounded-[30px] fadeInUp bg-[#fff]  border-2 border-borderColor"
-       data-delay="0.2">
+  <div className="lg:w-[100%] w-full text-center mx-auto bg-black-200 lg:py-[70px] lg:px-20 py-10 px-10 lg:rounded-[40px] rounded-[30px] fadeInUp bg-[#fff]  border-2 border-borderColor">
        
     <h3 className="text-primary text-lg">
       Your skin tells your story, and it deserves the best care. At Skin Care by Zahraa,

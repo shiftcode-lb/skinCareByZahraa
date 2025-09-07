@@ -3,7 +3,7 @@ import React from 'react'
 import Title from '../components/Title'
 import Hero from '../components/Hero'
 import Services from '../components/Services'
-import Workshop from '../components/Workshop'
+import Workshop from '../components/WorkshopContent'
 import Quote from '../components/Quote'
 import Footer from '../components/Footer'
 import Map from '../components/Map'
@@ -13,6 +13,7 @@ import WorkProcess from '../components/WorkProcess'
 import BookNow from '../components/BookNow'
 import Pricing from '../components/Pricing'
 import Result from '../components/Results'
+import WcSection from '../components/WcSection'
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
       <Quote />
       <WorkProcess />
       <Services />
+      <WcSection />
       <Result />
       <Feedbacks />
       <FAQ />
