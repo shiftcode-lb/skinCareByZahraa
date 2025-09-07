@@ -7,18 +7,23 @@ import { assets } from "../assets/assets";
 const Result= () => {
   const slides = [
   {
-    title: "Acne Removal",
-    image: assets.acne,
+    title: "Acne Treatment",
+    image: assets.acneTreatment1,
+    // overlay: "from-violet-500/40 to-purple-500/40",
+  },
+  {
+    title: "Acne Treatment",
+    image: assets.acneTreatment2,
     // overlay: "from-violet-500/40 to-purple-500/40",
   },
   {
     title: "HydraFacial",
-    image: assets.hydrafacial,
+    image: assets.hydraFacial1,
     // overlay: "from-fuchsia-500/40 to-pink-500/40",
   },
   {
-    title: "Facial",
-    image: assets.facial,
+    title: "HydraFacial",
+    image: assets.hydraFacial2,
     // overlay: "from-pink-500/40 to-rose-500/40",
   },
   {

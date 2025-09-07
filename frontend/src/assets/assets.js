@@ -19,6 +19,12 @@ import arrow1 from "./images/process1.png"
 import arrow2 from "./images/process2.png"
 import facial from "./images/results/facial.jpeg"
 import micro from "./images/results/micro.jpeg"
+import acneTreatment1 from "./images/results/acneTreatment1.jpeg"
+import acneTreatment2 from "./images/results/acneTreatment2.jpeg"
+import hydraFacial1 from "./images/results/hydraFacial1.jpeg"
+import hydraFacial2 from "./images/results/hydraFacial2.jpeg"
+
+
 
 export const assets = {
     feedback1,
@@ -41,7 +47,11 @@ export const assets = {
     back4,
     back5,
     arrow1,
-    arrow2
+    arrow2,
+    acneTreatment1,
+    acneTreatment2,
+    hydraFacial1,
+    hydraFacial2
 }
 
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import feedback1 from "../assets/images/feedbacks/feedback1.jpeg";
 import feedback2 from "../assets/images/feedbacks/feedback2.jpeg";
@@ -29,6 +29,14 @@ const Feedbacks = () => {
   const prevSlide = () => {
     setCurrent((prev) => (prev === 0 ? slideData.length - 1 : prev - 1));
   };
+
+  //after 4 sec it slides by itself
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 4000); // change slide every 4s
+    return () => clearInterval(interval);
+  }, []);
 
   // Handle drag end to decide direction
   const handleDragEnd = (event, info) => {
@@ -80,20 +88,6 @@ const Feedbacks = () => {
             onDragEnd={handleDragEnd}
           />
         </AnimatePresence>
-
-        {/* Controls */}
-        <button
-          onClick={prevSlide}
-          className="absolute cursor-pointer left-4 top-1/2 -translate-y-1/2 text-black rounded-full p-3"
-        >
-          ◀
-        </button>
-        <button
-          onClick={nextSlide}
-          className="absolute cursor-pointer right-4 top-1/2 -translate-y-1/2 text-black rounded-full p-3"
-        >
-          ▶
-        </button>
       </motion.div>
 
       {/* Dots */}
