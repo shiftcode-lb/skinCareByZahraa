@@ -77,6 +77,7 @@ const Pricing = () => {
                 price={item.price}
                 period="/session"
                 buttonText="Book Now"
+                onBook={scrollToBookNow}
                 features={item.description.split(" + ")}
               />
             </SwiperSlide>
