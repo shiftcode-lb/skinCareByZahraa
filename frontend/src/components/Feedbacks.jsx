@@ -30,20 +30,17 @@ const Feedbacks = () => {
     setCurrent((prev) => (prev === 0 ? slideData.length - 1 : prev - 1));
   };
 
-  //after 4 sec it slides by itself
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 4000); // change slide every 4s
+    }, 8000);
     return () => clearInterval(interval);
   }, []);
 
-  // Handle drag end to decide direction
   const handleDragEnd = (event, info) => {
     if (info.offset.x < -100) {
-      nextSlide(); // swiped left → next
     } else if (info.offset.x > 100) {
-      prevSlide(); // swiped right → previous
+      prevSlide();
     }
   };
 
