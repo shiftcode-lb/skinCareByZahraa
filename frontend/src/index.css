@@ -33,6 +33,11 @@
   --color-coprimary: #dcc28f;
   --color-borderColor: #c4b494;
 }
+
+::selection {
+  background-color: #86735d; /* Replace with your coprimary hex */
+  color: #ffffff; /* Text color when selected */
+}
 .swiper-pagination-bullet {
   background-color: #c4b494 !important; /* inactive bullet color */
   opacity: 0.7 !important;           /* optional: less visible */

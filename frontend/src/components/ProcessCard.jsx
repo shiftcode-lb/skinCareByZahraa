@@ -23,7 +23,7 @@ const ProcessCard = ({ icon, step, title, desc, shape }) => {
         <h3 className="lg:text-[32px] text-[26px] lg:leading-[30px] font-bold text-primary">
           {title}
         </h3>
-        <p className="text-lg text-gray-700 font-medium leading-7 lg:mt-[22px] mt-4">{desc}</p>
+        <p className="text-lg text-primary font-medium leading-7 lg:mt-[22px] mt-4">{desc}</p>
       </div>
     </div>
   );
