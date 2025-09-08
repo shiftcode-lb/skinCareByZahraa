@@ -95,7 +95,7 @@ const Result= () => {
 
         {/* Nav buttons */}
         <button
-          className="nav-button absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center z-20 text-white bg-white/10 backdrop-blur-md hover:bg-white/20 hover:scale-110 active:scale-95 transition"
+          className="nav-button absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center z-20 text-black bg-white/10 backdrop-blur-md hover:bg-white/20 hover:scale-110 active:scale-95 transition cursor-pointer"
           onClick={prevSlide}
         >
           <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -104,7 +104,7 @@ const Result= () => {
         </button>
 
         <button
-          className="nav-button absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center z-20 text-white bg-white/10 backdrop-blur-md hover:bg-white/20 hover:scale-110 active:scale-95 transition"
+          className="nav-button absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center z-20 text-black bg-white/10 backdrop-blur-md hover:bg-white/20 hover:scale-110 active:scale-95 transition cursor-pointer"
           onClick={nextSlide}
         >
           <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -136,11 +136,11 @@ const Result= () => {
             return (
               <div key={index} className={classes}>
                 <div className="w-full h-full p-4 sm:p-8">
-                  <div className="w-full h-full rounded-xl sm:rounded-2xl overflow-hidden relative group">
+                  <div className="w-full h-full rounded-xl sm:rounded-2xl overflow-hidden relative group ">
                     <img
                       src={slide.image}
                       alt={slide.title}
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 "
                     />
                     <div className={`absolute inset-0 bg-gradient-to-br ${slide.overlay} mix-blend-overlay`} />
                     <div className="absolute inset-x-0 bottom-0 p-4 sm:p-8 bg-gradient-to-t from-black/80 via-black/40 to-transparent">

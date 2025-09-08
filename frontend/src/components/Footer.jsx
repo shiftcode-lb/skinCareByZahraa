@@ -4,6 +4,11 @@ import { assets } from '../assets/assets'
 const Footer = () => {
   return (
     <div className="relative flex flex-col items-center justify-center w-full py-6 bg-primary text-white/70">
+      <img
+      src={assets.back5}
+      alt="background image"
+      className="absolute inset-0 h-full w-full object-cover opacity-10 pointer-events-none select-none right-0"
+      />
       <div
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         className="flex items-center flex-col justify-center text-2xl font-semibold text-background fancy cursor-pointer"

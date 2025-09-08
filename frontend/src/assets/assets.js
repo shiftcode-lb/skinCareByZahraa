@@ -57,8 +57,8 @@ export const assets = {
 
 export const menuLinks = [
     {name: "Home", path: "#top"},
+    {name: "About me", path: "#about"},
     {name:"Services", path: "#services"},
-    {name: "FAQ", path: "#faq"},
     {name: "Pricing", path: "#pricing"},
     {name: "Contact Us", path:"#book-now"}
 ];

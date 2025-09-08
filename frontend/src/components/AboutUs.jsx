@@ -4,7 +4,7 @@ import Title from "../components/Title";
 
 const AboutUs = () => {
   return (
-    <div className="px-3 sm:px-4 md:px-11 lg:px-12 xl:px-12 2xl:px-16 my-10 max-w-screen-xl mx-auto" id="about-me">
+    <div className="px-3 sm:px-4 md:px-11 lg:px-12 xl:px-12 2xl:px-16 my-10 max-w-screen-xl mx-auto" id="about">
       <RoundTitle title="About Me" />
       <Title
         title="Your Skin, Our Passion"

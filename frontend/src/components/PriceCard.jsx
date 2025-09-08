@@ -18,7 +18,7 @@ const PriceCard = ({ title, price, period, buttonText, features, onBook }) => {
         <div className="relative">
           <div className="flex-col">
             <button onClick={onBook ? onBook : () => {}} className="text-sm shadow-lg mt-3 block w-full rounded-md border border-borderColor 
-            bg-primary hover:bg-primary hover:border-primary transform hover:scale-103 transition duration-200 py-2 text-center  font-semibold text-background cursor-pointer ">
+            bg-primary hover:bg-primary hover:border-primary transform hover:scale-101 transition duration-200 py-2 text-center  font-semibold text-background cursor-pointer ">
               {buttonText}
             </button>
           </div>
@@ -29,7 +29,7 @@ const PriceCard = ({ title, price, period, buttonText, features, onBook }) => {
         <ul role="list" className="mt-6 space-y-4">
           {features.map((feature, i) => (
             <li key={i} className="flex space-x-3 items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" class="w-6 h-6">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 text-primary">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
               <span className=" text-primary text-sm  md:text-">{feature}</span>

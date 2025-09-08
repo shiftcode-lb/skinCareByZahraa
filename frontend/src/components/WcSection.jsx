@@ -2,6 +2,7 @@ import React from "react";
 import RoundTitle from "./RoundTitle";
 import Title from "./Title";
 import { useNavigate } from "react-router-dom";
+import { assets } from "../assets/assets";
 
 const WcSection = () => {
   const navigate = useNavigate();
@@ -15,14 +16,25 @@ const WcSection = () => {
     },
     {
       title: "Online Consultation",
-      desc: "Book a one-on-one consultation with our experts to get personalized skincare advice anytime, anywhere.",
+      desc: "Book a one-on-one consultation with me to get personalized skincare advice anytime, anywhere.",
       button: "Explore More",
       link: "/consultation",
     },
   ];
 
+  const handleNavigate = (link) => {
+    // Save current scroll position before navigating
+    sessionStorage.setItem('returnScrollPosition', window.scrollY.toString());
+    navigate(link);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <div className="mx-auto px-3 sm:px-4 md:px-11 lg:px-13 xl:px-12 2xl:px-16 max-w-screen-xl">
+    <div className="mx-auto px-3 sm:px-4 md:px-11 lg:px-13 xl:px-12 2xl:px-16 max-w-screen-xl relative" id="workshop">
+      <img src={assets.back3} alt="" 
+          className="absolute left-0 top-2/5 -translate-y-1/2 
+            lg:w-[20%] md:w-[30%] w-[40%] opacity-30 pointer-events-none select-none"
+          />
       <RoundTitle title="We provide" />
       <Title title="Workshop & Online Consultation" />
 
@@ -32,19 +44,17 @@ const WcSection = () => {
           <div
             data-aos="fade-up" data-aos-delay="300"
             key={i}
-            className="w-full h-[250px] bg-background rounded-2xl border-2 border-borderColor shadow-2xl p-6 flex flex-col 
-            justify-between transition-transform duration-500 hover:scale-103" 
+            className="w-full h-[250px] bg-background rounded-2xl border-2 border-borderColor shadow-xl p-6 flex flex-col 
+            justify-between " 
           >
             <div>
               <h2 className="text-2xl font-bold text-primary mb-3">{item.title}</h2>
-              <p className="text-primary">{item.desc}</p>
+              <p className="text-gray-700">{item.desc}</p>
             </div>
             <button
-              onClick={() => {
-                navigate(item.link);
-                window.scrollTo({ top: 0, behavior: "smooth" });
-                }}
-              className="mt-6 w-full py-2 bg-primary text-background rounded-lg font-semibold transition hover:scale-103 active:scale-95 cursor-pointer"
+              onClick={() => handleNavigate(item.link)}
+              className="text-md mt-6 w-full py-2 bg-primary text-background rounded-lg font-semibold 
+              transition hover:scale-101 active:scale-95 cursor-pointer"
             >
               {item.button}
             </button>

@@ -1,60 +1,102 @@
 import React from "react";
+import { CheckCircle } from "lucide-react";
 
 const WorkshopContent = () => {
-
-  const cards = [
+  const sections = [
     {
-      icon: "ri-magic-fill",
+      title: "Workshop Topics",
+      items: [
+        "The Aesthetics of a Skin Expert",
+        "Skincare Consultation Techniques",
+      ],
+    },
+    {
       title: "Cosmetic Treatments",
-      desc: "Facials, Microneedling, Peeling",
+      items: ["Facials", "Microneedling", "Peeling"],
     },
     {
-      icon: "ri-emotion-happy-fill",
-      title: "All About Facial",
-      desc: "Protocols, Brands, Deep Cleaning Steps, Hydrafacial Techniques",
+      title: "All About Facials",
+      items: [
+        "Protocols",
+        "Brands",
+        "Deep Cleaning Steps",
+        "Hydrafacial Techniques",
+      ],
     },
     {
-      icon: "ri-contrast-drop-fill",
-      title: "Microneedling",
-      desc: "Pre and Post-Care, Meso Brands, Protocols",
-    },
-    {
-      icon: "ri-shape-fill",
       title: "Combination Treatments",
-      desc: "Integrated advanced methods for professional results.",
+      items: [
+        "Learn how to combine treatments for enhanced results tailored to each client.",
+      ],
     },
     {
-      icon: "ri-book-2-fill",
-      title: "Training Details",
-      desc: "In-depth explanation and hands-on training, practice with live models, printed PDF with all notes and certificate of attendance.",
+      title: "Microneedling",
+      items: ["Pre and Post-Care", "Meso Brands", "Protocols"],
     },
     {
-      icon: "ri-book-2-fill",
-      title: "Notes",
-      desc: "The cost of the training is 250$, private session from 10 am till 6 pm with practice on models, suitable for beginners with some skincare basics.",
+      title: "Workshop Includes",
+      items: [
+        "In-depth explanation",
+        "Hands-on training",
+        "Practice with live models",
+        "Printed PDF with all notes",
+        "Certificate of Attendance",
+      ],
+      withIcons: true,
     },
   ];
 
   return (
-  <div className="px-3 sm:px-4 md:px-11 lg:px-13 xl:px-12 2xl:px-16 max-w-screen-xl mx-auto">
-    <div className="">
+    <section className="px-6 md:px-12 lg:px-24 py-12 text-primary">
+      {/* Section Header */}
+      <div className="text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-semibold">
+          Intensive Training for Beginner Skin Experts
+        </h2>
+        <p className="mt-2 text-lg text-gray-700">
+          One full-day private session (10 AM – 6 PM) with live model practice
+        </p>
+      </div>
 
-      {/* Grid Section */}
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-x-6 gap-y-7.5 max-w-6xl mx-auto mt-10">
-        {cards.map((item, i) => (
+      {/* Cards */}
+      <div className="grid md:grid-cols-2 gap-8">
+        {sections.map((section, i) => (
           <div
             key={i}
-            className="text-center py-12 px-7.5 rounded-[15px] border border-[#bebebe] hover:border-primary transition-all duration-500 shadow-sm"
+            className="p-6 bg-white rounded-2xl shadow-lg border-2 border-borderColor hover:shadow-xl transition-shadow duration-300"
           >
-            <i className={`${item.icon} text-[50px] text-primary`}></i>
-            <h4 className="lg:text-2xl text-xl font-semibold my-3">{item.title}</h4>
-            <div className="lg:text-base text-sm text-gray-700">{item.desc}</div>
+            <h3 className="text-xl font-semibold pb-2 mb-4 border-b-1 border-borderColor">{section.title}</h3>
+            <ul className="space-y-2 text-gray-700">
+              {section.items.map((item, idx) => (
+                <li
+                  key={idx}
+                  className={`flex items-start gap-2 ${
+                    section.withIcons ? "pl-1" : ""
+                  }`}
+                >
+                  {section.withIcons && (
+                    <CheckCircle className="w-5 h-5 text-primary mt-0.5" />
+                  )}
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         ))}
       </div>
-    </div>
-  </div>
-);
-}
+
+      {/* Price + Note */}
+      <div className="mt-12 text-center">
+        <p className="text-xl font-semibold text-primary">
+          Training Cost: <span className="text-secondary">$250</span>
+        </p>
+        <p className="mt-2 text-gray-700 italic">
+          * This training is for beginners, but you should have a basic
+          foundation in skincare.
+        </p>
+      </div>
+    </section>
+  );
+};
 
 export default WorkshopContent;

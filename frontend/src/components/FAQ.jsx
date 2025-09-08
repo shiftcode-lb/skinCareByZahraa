@@ -75,10 +75,6 @@ const FAQ = () => {
   return (
     <div className="flex flex-col justify-center items-center relative
     w-full mx-auto px-3 sm:px-4 md:px-11 lg:px-13 xl:px-12 2xl:px-16 max-w-screen-xl" id="faq">
-    <img src={assets.back3} alt="" 
-    className="absolute left-0 top-2/5 -translate-y-1/2 
-      lg:w-[20%] md:w-[30%] w-[40%] opacity-30 pointer-events-none select-none"
-    />
   <RoundTitle 
   title="FAQ"
   />

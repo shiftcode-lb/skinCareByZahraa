@@ -9,40 +9,27 @@ const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
-  // disable scroll when menu is open
-  useEffect(() => {
-    if (open) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflowX = 'hidden';
-      document.body.style.overflowY = 'auto';
-    }
+  // ... your existing useEffect hooks ...
 
-    return () => {
-      document.body.style.overflowX = 'hidden';
-      document.body.style.overflowY = 'auto';
-    };
-  }, [open]);
-
-  // hide/show navbar on scroll (applies to all pages)
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY < 50) {
-        setShowNavbar(true);
-      } else if (currentScrollY > lastScrollY) {
-        setShowNavbar(false); // scrolling down hide
+  const handleBack = () => {
+    navigate("/");
+    
+    // Restore scroll position after a short delay to ensure page is loaded
+    setTimeout(() => {
+      const savedPosition = sessionStorage.getItem('returnScrollPosition');
+      if (savedPosition) {
+        window.scrollTo({
+          top: parseInt(savedPosition),
+          behavior: 'smooth'
+        });
+        // Clear the stored position after using it
+        sessionStorage.removeItem('returnScrollPosition');
       } else {
-        setShowNavbar(true); // scrolling up show
+        // Fallback: scroll to top if no position was saved
+        window.scrollTo({ top: 0, behavior: "smooth" });
       }
-
-      setLastScrollY(currentScrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY]);
+    }, 100);
+  };
 
   return (
     <div
@@ -64,7 +51,7 @@ const Navbar = () => {
             alt="Navbar Logo"
             className="w-[75px] h-[75px]"
           />
-          <p className="ml-3 text-center sm:text-3xl text-xl fancy-title">
+          <p className="ml-3 text-center lg:text-3xl text-xl fancy-title">
             Skin Care By Zahraa
           </p>
         </div>
@@ -114,10 +101,10 @@ const Navbar = () => {
           </>
         ) : (
           <button
-            onClick={() => navigate("/")}
+            onClick={handleBack}
             className="text-primary font-semibold border px-2 py-2 rounded-lg hover:bg-primary hover:text-white transition cursor-pointer"
           >
-            ← Home
+            ← Back
           </button>
         )}
       </div>

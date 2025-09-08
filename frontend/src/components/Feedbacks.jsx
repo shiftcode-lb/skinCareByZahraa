@@ -39,6 +39,7 @@ const Feedbacks = () => {
 
   const handleDragEnd = (event, info) => {
     if (info.offset.x < -100) {
+      nextSlide();
     } else if (info.offset.x > 100) {
       prevSlide();
     }
@@ -74,7 +75,7 @@ const Feedbacks = () => {
             key={slideData[current].src}
             src={slideData[current].src}
             alt={slideData[current].title}
-            className="w-full h-full object-contain rounded-2xl"
+            className="w-full h-full object-contain rounded-2xl cursor-grab active:cursor-grabbing"
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -100 }}
