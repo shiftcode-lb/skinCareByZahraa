@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from './components/Navbar'
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { useEffect } from "react";
 import Home from './pages/Home';
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -13,10 +13,11 @@ import ScrollToTop from "./components/ScrollToTop";
 const App = () => {
   useEffect(() => {
     AOS.init({
-      duration: 800, // animation duration
-      once: false,    // whether animation should happen only once
+      duration: 800,
+      once: false,
     });
   }, []);
+  
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -25,6 +26,8 @@ const App = () => {
         <Route path='/' element={<Home />}/>
         <Route path='/workshop' element = {<Workshop />}/>
         <Route path='/consultation' element = {<Consultation />}/>
+        {/* Add a catch-all route that redirects to home */}
+        <Route path='*' element={<Navigate to="/" replace />} />
       </Routes>
     </div>
   )
