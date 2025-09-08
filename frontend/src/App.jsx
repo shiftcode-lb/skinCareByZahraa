@@ -26,8 +26,6 @@ const App = () => {
         <Route path='/' element={<Home />}/>
         <Route path='/workshop' element = {<Workshop />}/>
         <Route path='/consultation' element = {<Consultation />}/>
-        {/* Add a catch-all route that redirects to home */}
-        <Route path='*' element={<Navigate to="/" replace />} />
       </Routes>
     </div>
   )
