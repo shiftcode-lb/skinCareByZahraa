@@ -26,7 +26,6 @@ export const FlipWords = ({
   }, [isAnimating, duration, startAnimation]);
 
   return (
-    <div className="relative inline-block min-w-[ch]"> 
     <AnimatePresence
       onExitComplete={() => {
         setIsAnimating(false);
@@ -45,18 +44,16 @@ export const FlipWords = ({
           stiffness: 100,
           damping: 10,
         }}
-        exit={
-          {
-            opacity: 0,
+        exit={{
+          opacity: 0,
           y: -40,
           x: 40,
           filter: "blur(8px)",
-          scale: 2,
+          scale: 0,
           position: "absolute",
-          }
-        }
+        }}
         className={cn(
-          " inline-block relative text-left text-primary px-2",
+          "z-10 inline-block relative text-left text-primary px-2",
           className
         )}
         key={currentWord}>
@@ -89,6 +86,5 @@ export const FlipWords = ({
         ))}
       </motion.div>
     </AnimatePresence>
-    </div>
   );
 };

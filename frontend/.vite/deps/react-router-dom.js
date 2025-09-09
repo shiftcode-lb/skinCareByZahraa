@@ -1,11 +1,13 @@
 import {
   require_react_dom
-} from "./chunk-QOVZGY7A.js";
+} from "./chunk-IIT576ZH.js";
+import {
+  require_react
+} from "./chunk-3VDXVL42.js";
 import {
   __commonJS,
-  __toESM,
-  require_react
-} from "./chunk-5WQJO2FO.js";
+  __toESM
+} from "./chunk-5WRI5ZAA.js";
 
 // node_modules/cookie/dist/index.js
 var require_dist = __commonJS({
@@ -12627,7 +12629,7 @@ function createRouteFromServerManifest(match, payload) {
     } : (
       // We always make the call in this RSC world since even if we don't
       // have a `loader` we may need to get the `element` implementation
-      (_, singleFetch) => callSingleFetch(singleFetch)
+      ((_, singleFetch) => callSingleFetch(singleFetch))
     ),
     action: match.clientAction ? (args, singleFetch) => match.clientAction({
       ...args,
