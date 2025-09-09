@@ -10,7 +10,7 @@ const Hero = () => {
     w-full mx-auto px-3 sm:px-4 md:px-11 lg:px-13 xl:px-12 2xl:px-16 max-w-screen-xl z-30">
       
       <img src={assets.back1} alt="background image" 
-      className="absolute left-[-30px] sm:left-[-100px] top-3/5 -translate-y-1/2 lg:w-[20%] md:w-[30%] w-[40%] opacity-30 pointer-events-none select-none"
+      className="absolute left-[-30px] sm:left-[-100px] top-[40vh] -translate-y-1/2 lg:w-[20%] md:w-[30%] w-[40%] opacity-30 pointer-events-none select-none"
       />
       {/* Content */}
       <div className="relative mx-auto text-center text-primary -0">
