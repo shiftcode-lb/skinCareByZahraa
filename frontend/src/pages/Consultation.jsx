@@ -11,7 +11,7 @@ const Consultation = () => {
   }, []);
   return (
     <div>
-      <div className='mt-30'>
+      <div className='mt-10'>
         <Title
         title="Online Consultation"
         />

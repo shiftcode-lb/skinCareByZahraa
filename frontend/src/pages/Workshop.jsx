@@ -10,7 +10,7 @@ const Workshop = () => {
     window.scrollTo(0, 0);
   }, [])
   return (
-    <div className='mt-30'>
+    <div className='mt-15'>
         <Title
         title="Workshop"
         />

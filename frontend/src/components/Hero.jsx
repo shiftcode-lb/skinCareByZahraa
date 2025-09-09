@@ -6,8 +6,8 @@ import { assets } from "../assets/assets";
 const Hero = () => {
   const words = ["GLOW", "CONFIDENCE", "RADIANCE", "BEAUTY"]
   return (
-    <div className="flex flex-col gap-10 justify-center  md:flex-row items-center min-h-[95vh] relative
-    w-full mx-auto px-3 sm:px-4 md:px-11 lg:px-13 xl:px-12 2xl:px-16 max-w-screen-xl pt-15">
+    <div className="flex flex-col gap-10 justify-center  md:flex-row items-center min-h-[78vh] relative
+    w-full mx-auto px-3 sm:px-4 md:px-11 lg:px-13 xl:px-12 2xl:px-16 max-w-screen-xl">
       
       <img src={assets.back1} alt="background image" 
       className="absolute left-[-30px] sm:left-[-100px] top-3/5 -translate-y-1/2 lg:w-[20%] md:w-[30%] w-[40%] opacity-30 pointer-events-none select-none"
@@ -55,7 +55,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll Down */} 
-      <div className="absolute bottom-[3vh] left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 animate-bounce">
   <button
     onClick={() => {
       const section = document.getElementById("process");

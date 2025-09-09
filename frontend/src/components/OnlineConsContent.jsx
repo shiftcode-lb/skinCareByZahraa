@@ -26,7 +26,7 @@ const OnlineConsContent = () => {
   ];
 
   return (
-    <section className="px-6 md:px-12 lg:px-24 py-12 text-primary">
+    <section className="px-6 md:px-12 lg:px-24 py-8 text-primary">
       {/* Cards */}
       <div className="grid md:grid-cols-2 gap-8">
         {sections.map((section, i) => (

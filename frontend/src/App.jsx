@@ -22,11 +22,13 @@ const App = () => {
     <div className="min-h-screen">
       <Navbar />
       <ScrollToTop />
+      <div className='pt-[97px]' >
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/workshop' element = {<Workshop />}/>
         <Route path='/consultation' element = {<Consultation />}/>
       </Routes>
+      </div>
     </div>
   )
 }
