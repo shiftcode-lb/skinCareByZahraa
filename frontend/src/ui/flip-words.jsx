@@ -26,6 +26,7 @@ export const FlipWords = ({
   }, [isAnimating, duration, startAnimation]);
 
   return (
+    <div className="relative inline-block min-w-[ch]"> 
     <AnimatePresence
       onExitComplete={() => {
         setIsAnimating(false);
@@ -88,5 +89,6 @@ export const FlipWords = ({
         ))}
       </motion.div>
     </AnimatePresence>
+    </div>
   );
 };
