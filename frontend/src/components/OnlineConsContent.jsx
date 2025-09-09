@@ -32,7 +32,7 @@ const OnlineConsContent = () => {
         {sections.map((section, i) => (
           <div
             key={i}
-            className="p-6 bg-white rounded-2xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300"
+            className="p-6 bg-white rounded-2xl shadow-lg border border-borderColor hover:shadow-2xl transition-shadow duration-300"
           >
             <h3 className="text-lg md:text-xl font-semibold mb-4 pb-2 border-b-1 border-borderColor">{section.title}</h3>
             <ul className="space-y-2 text-gray-700 max-w-[95%] sm:max-w-[90%] md:max-w-full">
@@ -44,7 +44,7 @@ const OnlineConsContent = () => {
                   }`}
                 >
                   {section.withIcons && (
-                    <CheckCircle className="w-3 h-3 sm:w-5 sm:h-5 text-primary mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-3 h-3 sm:w-5 sm:h-5 text-primary sm:mt-0.5 mt-1.5 flex-shrink-0" />
                   )}
                   <span className="text-sm sm:text-base leading-relaxed">{item}</span>
                 </li>

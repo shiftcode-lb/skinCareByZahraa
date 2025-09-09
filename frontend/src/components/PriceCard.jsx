@@ -24,7 +24,7 @@ const PriceCard = ({ title, price, period, buttonText, features, onBook }) => {
           </div>
         </div>
       </div>
-      <div className="px-6 pt-6 pb-8 border-t">
+      <div className="px-6 pt-6 pb-8 border-t-2 border-borderColor">
         <h3 className="text-sm font-medium text-gray-900">What's included</h3>
         <ul role="list" className="mt-6 space-y-4">
           {features.map((feature, i) => (

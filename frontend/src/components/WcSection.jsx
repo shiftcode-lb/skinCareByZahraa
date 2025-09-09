@@ -49,7 +49,7 @@ const WcSection = () => {
           >
             <div>
               <h2 className="text-2xl font-bold text-primary mb-3">{item.title}</h2>
-              <p className="text-gray-700">{item.desc}</p>
+              <p className="text-primary">{item.desc}</p>
             </div>
             <button
               onClick={() => handleNavigate(item.link)}

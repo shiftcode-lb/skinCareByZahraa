@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { assets, menuLinks } from '../assets/assets';
+import { scroller } from "react-scroll";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);

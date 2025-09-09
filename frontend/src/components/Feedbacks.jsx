@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import feedback1 from "../assets/images/feedbacks/feedback1.jpeg";
 import feedback2 from "../assets/images/feedbacks/feedback2.jpeg";
@@ -21,6 +21,8 @@ const slideData = [
 
 const Feedbacks = () => {
   const [current, setCurrent] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const intervalRef = useRef(null);
 
   const nextSlide = () => {
     setCurrent((prev) => (prev === slideData.length - 1 ? 0 : prev + 1));
@@ -31,11 +33,13 @@ const Feedbacks = () => {
   };
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 8000);
-    return () => clearInterval(interval);
-  }, []);
+    if (!isPaused) {
+      intervalRef.current = setInterval(() => {
+        nextSlide();
+      }, 5000);
+    }
+    return () => clearInterval(intervalRef.current);
+  }, [isPaused]);
 
   const handleDragEnd = (event, info) => {
     if (info.offset.x < -100) {
@@ -48,18 +52,16 @@ const Feedbacks = () => {
   return (
     <section className="flex flex-col items-center px-3 sm:px-4 md:px-11 lg:px-13 xl:px-12 2xl:px-16 relative">
       <img
-      src={assets.back4}
-      alt="background image"
-      className="absolute right-[0px] sm:right-[0px] top-5/5 -translate-y-1/2 
+        src={assets.back4}
+        alt="background image"
+        className="absolute right-[0px] sm:right-[0px] top-5/5 -translate-y-1/2 
       lg:w-[20%] md:w-[30%] w-[40%] opacity-30 pointer-events-none select-none"
-    />
-      {/* Title Section */}
-      <RoundTitle 
-      title="Feedbacks"
       />
-      <Title 
-      title="What Our Clients Say"
-      subtitle="See why clients love their skincare journey with us"
+      {/* Title Section */}
+      <RoundTitle title="Feedbacks" />
+      <Title
+        title="What Our Clients Say"
+        subtitle="See why clients love their skincare journey with us"
       />
 
       {/* Carousel Section */}
@@ -68,7 +70,11 @@ const Feedbacks = () => {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="relative w-full md:w-1/2 h-[380px] overflow-hidden rounded-2xl shadow-xl border border-borderColor mt-10 "
+        className="relative w-full md:w-1/2 h-[380px] overflow-hidden rounded-2xl shadow-xl border-2 border-borderColor mt-10 "
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+        onTouchStart={() => setIsPaused(true)}
+        onTouchEnd={() => setIsPaused(false)}
       >
         <AnimatePresence mode="wait">
           <motion.img
@@ -79,7 +85,7 @@ const Feedbacks = () => {
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -100 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.3 }}
             drag="x"
             dragConstraints={{ left: 0, right: 0 }}
             dragElastic={0.3}

@@ -37,8 +37,6 @@ const Hero = () => {
           Professional skincare treatments to help you glow with confidence and embrace
           your natural beauty.
         </p>
-
-        {/* CTA Button */}
         <div className="flex justify-center items-center mt-8">
   <button
     onClick={() => {
@@ -47,11 +45,9 @@ const Hero = () => {
         section.scrollIntoView({ behavior: "smooth" });
       }
     }}
-    className="relative flex items-center justify-center px-6 py-3 border-2 cursor-pointer border-primary rounded-full text-background text-lg font-semibold
-      bg-primary hover:bg-primary hover:border-primary shadow-lg transform hover:scale-105 transition duration-200"
+    className="relative flex items-center justify-center px-6 py-3 border-2 cursor-pointer border-primary rounded-full text-background text-lg font-semibold bg-primary hover:bg-primary hover:border-primary shadow-lg transform hover:scale-105 transition duration-500"
   >
     <span className="relative">Book Now</span>
-    {/* Optional ping effect */}
     <span className="absolute inset-0 rounded-full bg-primary opacity-50 animate-ping"></span>
   </button>
 </div>
