@@ -39,13 +39,13 @@ const Home = () => {
       <Hero />
       <Quote />
       <AboutUs />
+      <Pricing />
       <WorkProcess />
       <Services />
       <WcSection />
       <Result />
       <Feedbacks />
       <FAQ />
-      <Pricing />
       <Map />
       <BookNow />
       <Footer />

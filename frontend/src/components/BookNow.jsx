@@ -9,10 +9,10 @@ const BookNow = ({
 
   return (
     <div
-      className="px-3 sm:px-4 md:px-11 lg:px-13 xl:px-12 2xl:px-16 my-12 max-w-screen-xl mx-auto"
+      className="text-primary bg-background border-primary border-2 rounded-2xl px-3 sm:px-4 md:px-11 lg:px-13 xl:px-12 2xl:px-16 my-12 max-w-screen-xl mx-auto"
       id="book-now"
     >
-      <div className="bg-gradient-to-r from-coprimary/90 to-primary/90 rounded-2xl p-8 md:p-12 flex flex-col items-center text-center w-full" data-aos="fade-up" data-aos-delay="300">
+      <div className="bg- rounded-2xl p-8 md:p-12 flex flex-col items-center text-center w-full" data-aos="fade-up" data-aos-delay="300">
         <h2 className="text-3xl font-bold mb-4 text-black fancy-heavy">{title}</h2>
         <p className="text-xl max-w-2xl mx-auto mb-6 text-black fancy">{description}</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
