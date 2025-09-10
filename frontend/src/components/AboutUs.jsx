@@ -30,7 +30,7 @@ const AboutUs = () => {
           <p className="text-primary">Years Experience</p>
         </div>
         <div className="rounded-lg border-2 border-borderColor bg-background p-6 text-center">
-          <h4 className="mb-2 text-3xl font-bold text-primary">500+</h4>
+          <h4 className="mb-2 text-3xl font-bold text-primary">1000+</h4>
           <p className="text-primary">Happy Clients</p>
         </div>
         <div className="rounded-lg border-2 border-borderColor bg-background p-6 text-center">

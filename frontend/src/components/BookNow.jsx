@@ -13,7 +13,7 @@ const BookNow = ({
       id="book-now"
     >
       <div className="bg- rounded-2xl p-8 md:p-12 flex flex-col items-center text-center w-full" data-aos="fade-up" data-aos-delay="300">
-        <h2 className="text-3xl font-bold mb-4 text-black fancy-heavy">{title}</h2>
+        <h2 className="text-3xl font-bold mb-4 text-primary ">{title}</h2>
         <p className="text-xl max-w-2xl mx-auto mb-6 text-black fancy">{description}</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           {/* WhatsApp */}
