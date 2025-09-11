@@ -54,9 +54,10 @@ const WcSection = () => {
             <button
               onClick={() => handleNavigate(item.link)}
               className="text-md mt-6 w-full py-2 bg-primary text-background rounded-lg font-semibold 
-              transition hover:scale-101 active:scale-95 cursor-pointer"
+              transition hover:scale-101 active:scale-95 cursor-pointer hover:bg-[#6f5e4b]"
             >
               {item.button}
+              <i className="fa-solid fa-arrow-right text-sm px-2"></i>
             </button>
           </div>
         ))}

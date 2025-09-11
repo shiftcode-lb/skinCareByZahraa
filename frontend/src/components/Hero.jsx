@@ -35,7 +35,7 @@ const Hero = () => {
         section.scrollIntoView({ behavior: "smooth" });
       }
     }}
-    className="relative flex items-center justify-center px-6 py-3 border-2 cursor-pointer border-primary rounded-full text-background text-lg font-semibold bg-primary hover:bg-primary hover:border-primary shadow-lg transform hover:scale-105 transition duration-500"
+    className="relative flex items-center justify-center px-6 py-3 border-2 cursor-pointer border-primary rounded-full text-background text-lg font-semibold bg-primary hover:bg-[#6f5e4b] hover:border-primary shadow-lg transform hover:scale-105 transition duration-500"
   >
     <span className="relative">Book Now</span>
     <span className="absolute inset-0 rounded-full bg-primary opacity-50 animate-ping"></span>

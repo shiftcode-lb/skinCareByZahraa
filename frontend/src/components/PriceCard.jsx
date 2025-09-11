@@ -17,8 +17,8 @@ const PriceCard = ({ title, price, period, buttonText, features, onBook }) => {
         </p>
         <div className="relative">
           <div className="flex-col">
-            <button onClick={onBook ? onBook : () => {}} className="text-sm shadow-lg mt-3 block w-full rounded-md border border-borderColor 
-            bg-primary hover:bg-primary hover:border-primary transform hover:scale-101 transition duration-200 py-2 text-center  font-semibold text-background cursor-pointer ">
+            <button onClick={onBook ? onBook : () => {}} className="text-sm shadow-lg mt-3 block w-full rounded-md 
+            bg-primary hover:bg-[#6f5e4b] hover:border-primary transform hover:scale-101 transition duration-200 py-2 text-center  font-semibold text-background cursor-pointer ">
               {buttonText}
             </button>
           </div>

@@ -47,7 +47,7 @@ const WorkshopContent = () => {
   ];
 
   return (
-    <section className="px-6 md:px-12 lg:px-24 py-10 text-primary">
+    <section className="mx-auto px-3 sm:px-4 md:px-11 lg:px-13 xl:px-12 2xl:px-16 max-w-screen-xl py-10 text-primary">
       {/* Section Header */}
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-semibold">

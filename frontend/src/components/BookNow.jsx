@@ -9,12 +9,15 @@ const BookNow = ({
 
   return (
     <div
-      className="text-primary bg-background border-primary border-2 rounded-2xl px-3 sm:px-4 md:px-11 lg:px-13 xl:px-12 2xl:px-16 my-12 max-w-screen-xl mx-auto"
+      className="w-full mx-auto px-3 sm:px-4 md:px-11 lg:px-13 xl:px-12 2xl:px-16 max-w-screen-xl mt-10"
       id="book-now"
+      data-aos="fade-up"
+      data-aos-delay="300"
     >
-      <div className="bg- rounded-2xl p-8 md:p-12 flex flex-col items-center text-center w-full" data-aos="fade-up" data-aos-delay="300">
-        <h2 className="text-3xl font-bold mb-4 text-primary ">{title}</h2>
+      <div className="text-primary bg-background border-primary border-2 rounded-2xl flex flex-col items-center text-center p-8 md:p-12 mb-10 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+        <h2 className="text-3xl font-bold mb-4 text-primary">{title}</h2>
         <p className="text-xl max-w-2xl mx-auto mb-6 text-primary">{description}</p>
+
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           {/* WhatsApp */}
           <a
@@ -27,6 +30,7 @@ const BookNow = ({
             WhatsApp Us
           </a>
         </div>
+
         <p className="text-sm max-w-2xl mx-auto mt-6 text-primary">
           <span className="font-extrabold">Note:</span> {note}
         </p>
