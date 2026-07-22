@@ -17,41 +17,41 @@ const Pricing = () => {
     }
   };
   
+  // Wrap price ranges in quotes so JS treats them as strings
   const facials = [
-    { title: "Basic Facial", price: 40, description: "Deep Cleaning + Smart Peel" },
-    { title: "Glow Skin Treatment", price: 50, description: "Basic Facial + Smart Peel" },
+    { title: "Basic Facial", price: "40", description: "Deep Cleaning + Smart Peel" },
+    { title: "Glow Skin Treatment", price: "50", description: "Basic Facial + Smart Peel" },
   ];
   
   const microneedlingAndPeels = [
-    { title: "Bundle 1", price: 70-90, description: "Facial + Microneedling + Mesotherapy Vitamins" },
-    { title: "Bundle 2", price: 60-90, description: "Facial + Algee Peeling + Vitamins" },
+    { title: "Bundle 1", price: "70-90", description: "Facial + Microneedling + Mesotherapy Vitamins" },
+    { title: "Bundle 2", price: "60-90", description: "Facial + Algee Peeling + Vitamins" },
   ];
 
   const medicalFacial = [
-    { title: "Facial+ Skin Treatment", price: 50-80, description: "Acne Treatment + Rosacea Treatment + Skin Repair + Add on Vitamins" }
+    { title: "Facial+ Skin Treatment", price: "50-80", description: "Acne Treatment + Rosacea Treatment + Skin Repair + Add on Vitamins" }
   ];
 
-  // New bundle treatments
   const bundle = [
-    { title: "Bundle 1", price: 80, description: "Deep Cleaning + Smart Peel + Microneedling + Exosomes + Meso Skin Booster" },
-    { title: "Bundle 2", price: 100, description: "Deep Cleaning + Microneedling + Meso Cocktail + TCA Peel + Exosomes" },
+    { title: "Bundle 1", price: "80", description: "Deep Cleaning + Smart Peel + Microneedling + Exosomes + Meso Skin Booster" },
+    { title: "Bundle 2", price: "100", description: "Deep Cleaning + Microneedling + Meso Cocktail + TCA Peel + Exosomes" },
   ];
-  
 
   const renderPriceCards = (items) => (
     <>
-      {/* Grid for medium and larger screens */}
-      <div className="hidden sm:grid gap-6 sm:grid-cols-2 lg:grid-cols-2 w-full mt-12">
+      {/* Grid: Flex/Grid centering handles 1 or 2 cards gracefully */}
+      <div className={`hidden sm:flex flex-wrap justify-center gap-6 w-full mt-12`}>
         {items.map((item, i) => (
-          <PriceCard
-            key={i}
-            title={item.title}
-            price={item.price}
-            period="/session"
-            buttonText="Book Now"
-            onBook={scrollToBookNow}
-            features={item.description.split(" + ")}
-          />
+          <div key={i} className="w-full sm:w-[calc(50%-12px)] max-w-sm">
+            <PriceCard
+              title={item.title}
+              price={item.price}
+              period="/session"
+              buttonText="Book Now"
+              onBook={scrollToBookNow}
+              features={item.description.split(" + ")}
+            />
+          </div>
         ))}
       </div>
 
@@ -63,12 +63,11 @@ const Pricing = () => {
           slidesPerView={1}
           pagination={{ clickable: true }}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
-          loop={true}
-          onBook={scrollToBookNow}
+          loop={items.length > 1} // Only loop if there's more than 1 item
           grabCursor={true}
         >
           {items.map((item, i) => (
-            <SwiperSlide key={i} className="h-full flex">
+            <SwiperSlide key={i} className="h-full flex justify-center">
               <PriceCard
                 title={item.title}
                 price={item.price}
