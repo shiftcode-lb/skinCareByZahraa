@@ -27,7 +27,7 @@ const Tabs = ({ tabs }) => {
         ))}
       </div>
 
-      <div className="mt-6">
+      <div className="mt-6 relative">
         {tabs.map((tab) => {
           const isActive = activeTab === tab.id;
           return (
@@ -35,8 +35,8 @@ const Tabs = ({ tabs }) => {
               key={tab.id}
               className={`transition-all duration-500 ease-in-out ${
                 isActive
-                  ? "opacity-100 translate-y-0 relative z-10 pointer-events-auto"
-                  : "opacity-0 translate-y-3 absolute inset-x-0 pointer-events-none hidden"
+                  ? "opacity-100 translate-y-0 scale-100 relative pointer-events-auto z-10"
+                  : "opacity-0 translate-y-4 scale-95 absolute inset-0 pointer-events-none z-0"
               }`}
             >
               {tab.content}
