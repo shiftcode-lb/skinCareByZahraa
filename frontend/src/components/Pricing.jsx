@@ -53,6 +53,17 @@ const Pricing = () => {
       </div>
 
       <div className="sm:hidden mt-6">
+          <style>
+            {
+              `.sm\\:hidden .swiper {
+                  padding-bottom: 40px !important;
+                }
+                .sm\\:hidden .swiper-pagination {
+                  bottom: 0px !important;
+                }
+              `
+            }
+        </style>
         <Swiper
           modules={[Pagination, Autoplay]}
           spaceBetween={20}
