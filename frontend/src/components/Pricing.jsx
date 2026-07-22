@@ -7,7 +7,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import { assets } from "../assets/assets";
 
 const Pricing = () => {
   const scrollToBookNow = () => {
@@ -59,9 +58,10 @@ const Pricing = () => {
           spaceBetween={20}
           slidesPerView={1}
           pagination={{ clickable: true }}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          autoplay={{ delay: 8000, disableOnInteraction: true }}
           loop={items.length > 1}
           grabCursor={true}
+          className="pb-12 !px-1"
         >
           {items.map((item, i) => (
             <SwiperSlide key={i} className="h-full flex justify-center">
