@@ -18,7 +18,7 @@ const Pricing = () => {
   };
   
   const facials = [
-    { title: "Basic Facial", price: "40", description: "Deep Cleaning + Smart Peel" },
+    { title: "Basic Facial", price: "40", description: "Deep Cleaning + Soothing Mask" },
     { title: "Glow Skin Treatment", price: "50", description: "Basic Facial + Smart Peel" },
   ];
   

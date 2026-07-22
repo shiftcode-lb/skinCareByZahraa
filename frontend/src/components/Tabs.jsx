@@ -33,7 +33,7 @@ const Tabs = ({ tabs }) => {
           return (
             <div
               key={tab.id}
-              className={`transition-all duration-500 ease-in-out ${
+              className={`transition-all duration-1500 ease-in-out ${
                 isActive
                   ? "opacity-100 translate-y-0 scale-100 relative pointer-events-auto z-10"
                   : "opacity-0 translate-y-4 scale-95 absolute inset-0 pointer-events-none z-0"
