@@ -9,7 +9,7 @@ const PriceCard = ({ title, price, period, buttonText, features, onBook }) => {
             {title}
           </h2>
         </div>
-        <p className="my-4 text-4xl font-bold tracking-tight text-gray-900">
+        <p className="my-4 text-4xl font-bold tracking-tight text-primary">
           ${price}
           <span className="text-base font-medium text-gray-500 ml-1">
             {period}

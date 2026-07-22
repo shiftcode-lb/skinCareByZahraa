@@ -17,7 +17,6 @@ const Pricing = () => {
     }
   };
   
-  // Wrap price ranges in quotes so JS treats them as strings
   const facials = [
     { title: "Basic Facial", price: "40", description: "Deep Cleaning + Smart Peel" },
     { title: "Glow Skin Treatment", price: "50", description: "Basic Facial + Smart Peel" },
@@ -39,7 +38,6 @@ const Pricing = () => {
 
   const renderPriceCards = (items) => (
     <>
-      {/* Grid: Flex/Grid centering handles 1 or 2 cards gracefully */}
       <div className={`hidden sm:flex flex-wrap justify-center gap-6 w-full mt-12`}>
         {items.map((item, i) => (
           <div key={i} className="w-full sm:w-[calc(50%-12px)] max-w-sm">
@@ -55,7 +53,6 @@ const Pricing = () => {
         ))}
       </div>
 
-      {/* Swiper for small screens */}
       <div className="sm:hidden mt-6">
         <Swiper
           modules={[Pagination, Autoplay]}
@@ -63,7 +60,7 @@ const Pricing = () => {
           slidesPerView={1}
           pagination={{ clickable: true }}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
-          loop={items.length > 1} // Only loop if there's more than 1 item
+          loop={items.length > 1}
           grabCursor={true}
         >
           {items.map((item, i) => (

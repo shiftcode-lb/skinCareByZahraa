@@ -20,7 +20,7 @@ const Map = () => {
 
                 {/* Address */}
                 <div className="px-6 py-10 border-t border-gray-200 flex-1 text-center ">
-                  <h3 className="text-lg text-coprimary font-bold mb-2">
+                  <h3 className="text-lg text-background font-bold mb-2">
                     Our Address
                   </h3>
                   <p className="text-sm text-background">
