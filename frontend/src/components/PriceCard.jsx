@@ -11,7 +11,7 @@ const PriceCard = ({ title, price, period, buttonText, features, onBook }) => {
         </div>
         <p className="my-4 text-4xl font-bold tracking-tight text-primary">
           ${price}
-          <span className="text-base font-medium text-coprimary ml-1">
+          <span className="text-base font-medium text-gray-900 ml-1">
             {period}
           </span>
         </p>
@@ -25,7 +25,7 @@ const PriceCard = ({ title, price, period, buttonText, features, onBook }) => {
         </div>
       </div>
       <div className="px-6 pt-6 pb-8 border-t-2 border-borderColor">
-        <h3 className="text-sm font-medium text-coprimary">What's included</h3>
+        <h3 className="text-sm font-medium text-gray-900">What's included</h3>
         <ul role="list" className="mt-6 space-y-4">
           {features.map((feature, i) => (
             <li key={i} className="flex space-x-3 items-center">
