@@ -18,21 +18,17 @@ const Pricing = () => {
   };
   
   const facials = [
-    { title: "Facials – Package 1", price: 40, description: "Deep Cleaning + HydraFacial + Smart Peel + Soothing Mask" },
-    { title: "Facials – Package 2", price: 40, description: "Deep Cleaning + HydraFacial + Soothing Mask + Vitamin Mask" },
+    { title: "Basic Facial", price: 40, description: "Deep Cleaning + Smart Peel" },
+    { title: "Glow Skin Treatment", price: 50, description: "Basic Facial + Smart Peel" },
   ];
   
   const microneedlingAndPeels = [
-    { title: "Bundle 1", price: 60, description: "Deep Cleaning + Full Face Microneedling with mix vitamins + pro retinol or threadfill" },
-    { title: "Bundle 2", price: 60, description: "Deep Cleaning + Smart Peel + Full Face Microneedling with mix vitamins + pro retinol or threadfill" },
-    { title: "Bundle 3", price: 60, description: "Pure Algae Peel treatment for skin renewal" },
-    { title: "Bundle 4", price: 50, description: "Deep Cleaning + Light Algae Peeling + Mix Vitamins + Pro Retinol Peel" },
-    { title: "Bundle 5", price: 60, description: "TCA Peel for deep skin rejuvenation" },
+    { title: "Bundle 1", price: 70-90, description: "Facial + Microneedling + Mesotherapy Vitamins" },
+    { title: "Bundle 2", price: 60-90, description: "Facial + Algee Peeling + Vitamins" },
   ];
 
-  const glowSkin = [
-    { title: "Glow Skin Treatment – Package 1", price: 50, description: "Deep Cleaning + Smart Peel + Soothing Mask + Vitamin Mask + Eye Mask" },
-    { title: "Glow Skin Treatment – Package 2", price: 50, description: "Facial & Skin Treatment + Deep Cleaning + Acne or Repair or Rosacea Treatment" },
+  const medicalFacial = [
+    { title: "Facial+ Skin Treatment", price: 50-80, description: "Acne Treatment + Rosacea Treatment + Skin Repair + Add on Vitamins" }
   ];
 
   // New bundle treatments
@@ -90,9 +86,9 @@ const Pricing = () => {
 
   const tabs = [
     { id: "facials", label: "Facials", content: renderPriceCards(facials) },
-    { id: "glow", label: "Glow Skin Treatment", content: renderPriceCards(glowSkin) },
+    { id: "glow", label: "Medical Facial", content: renderPriceCards(medicalFacial) },
     { id: "microneedling", label: "Microneedling & Peels", content: renderPriceCards(microneedlingAndPeels) },
-    { id: "bundle", label: "Bundle", badge: "New", content: renderPriceCards(bundle) }, // updated bundle
+    { id: "bundle", label: "Signature Glow Facial", content: renderPriceCards(bundle) }, 
   ];
 
   return (
