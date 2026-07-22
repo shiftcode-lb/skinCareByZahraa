@@ -3,7 +3,7 @@ import React from "react";
 const PriceCard = ({ title, price, period, buttonText, features, onBook }) => {
   return (
     <div 
-      className="bg-white border-2 rounded-lg shadow-md w-full h-[450px] max-w-sm mx-auto border-borderColor flex flex-col justify-between" 
+      className="bg-white border-2 rounded-lg shadow-md w-full h-[440px] max-w-sm mx-auto border-borderColor flex flex-col justify-between" 
       data-aos="fade-up" 
       data-aos-delay="300"
     >
